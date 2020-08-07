@@ -1,0 +1,1532 @@
+fileFormatVersion: 2
+guid: 297f95043fcb943469048d3034557e0b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5759221556154876210
+    second: WHITE_ENEMY 0
+  - first:
+      213: -44916939541488137
+    second: WHITE_ENEMY 1
+  - first:
+      213: -2069902214698377859
+    second: WHITE_ENEMY 2
+  - first:
+      213: -7705435211101897111
+    second: WHITE_ENEMY 3
+  - first:
+      213: 6592452879265254034
+    second: WHITE_ENEMY 4
+  - first:
+      213: 3202294173479495983
+    second: WHITE_ENEMY 5
+  - first:
+      213: 7770120623391775373
+    second: WHITE_ENEMY 6
+  - first:
+      213: -7657402218928044540
+    second: WHITE_ENEMY 7
+  - first:
+      213: -7642663316211274010
+    second: WHITE_ENEMY 8
+  - first:
+      213: 6253980742369143300
+    second: WHITE_ENEMY 9
+  - first:
+      213: -3717532851207120191
+    second: WHITE_ENEMY 10
+  - first:
+      213: 1080547901535863863
+    second: WHITE_ENEMY 11
+  - first:
+      213: -7643250645590407498
+    second: WHITE_ENEMY 12
+  - first:
+      213: -6817653618961228964
+    second: WHITE_ENEMY 13
+  - first:
+      213: -4877378362548259018
+    second: WHITE_ENEMY 14
+  - first:
+      213: -3797571404275016591
+    second: WHITE_ENEMY 15
+  - first:
+      213: -4232989158695191278
+    second: WHITE_ENEMY 16
+  - first:
+      213: 2832336674409859337
+    second: WHITE_ENEMY 17
+  - first:
+      213: -2069328962933499123
+    second: WHITE_ENEMY 18
+  - first:
+      213: -6320242631316694346
+    second: WHITE_ENEMY 19
+  - first:
+      213: -8635004607133633497
+    second: WHITE_ENEMY 20
+  - first:
+      213: -1669958133025431205
+    second: WHITE_ENEMY 21
+  - first:
+      213: 7086112159048288039
+    second: WHITE_ENEMY 22
+  - first:
+      213: 2045579050173203022
+    second: WHITE_ENEMY 23
+  - first:
+      213: -5421853394189752087
+    second: WHITE_ENEMY 24
+  - first:
+      213: -1969303501071171648
+    second: WHITE_ENEMY 25
+  - first:
+      213: 8830217182888877317
+    second: WHITE_ENEMY 26
+  - first:
+      213: 5462953780259015292
+    second: WHITE_ENEMY 27
+  - first:
+      213: 6130146842199726724
+    second: WHITE_ENEMY 28
+  - first:
+      213: -1085522475345020807
+    second: WHITE_ENEMY 29
+  - first:
+      213: -4306299382894115938
+    second: WHITE_ENEMY 30
+  - first:
+      213: -1315963132460047880
+    second: WHITE_ENEMY 31
+  - first:
+      213: -6877287500428386450
+    second: WHITE_ENEMY 32
+  - first:
+      213: -1336018319447532411
+    second: WHITE_ENEMY 33
+  - first:
+      213: -4002543244680749853
+    second: WHITE_ENEMY 34
+  - first:
+      213: 6232414906909379658
+    second: WHITE_ENEMY 35
+  - first:
+      213: 9064309862396668910
+    second: WHITE_ENEMY 36
+  - first:
+      213: -3732180929454974198
+    second: WHITE_ENEMY 37
+  - first:
+      213: 7266103742979619044
+    second: WHITE_ENEMY 38
+  - first:
+      213: 8336961611925908126
+    second: WHITE_ENEMY 39
+  - first:
+      213: 1840532629158916973
+    second: WHITE_ENEMY 40
+  - first:
+      213: 1031371253079859007
+    second: WHITE_ENEMY 41
+  - first:
+      213: 7208611170348256967
+    second: WHITE_ENEMY 42
+  - first:
+      213: -6175559140283408625
+    second: WHITE_ENEMY 43
+  - first:
+      213: -1093994712027727146
+    second: WHITE_ENEMY 44
+  - first:
+      213: 4919497717646753964
+    second: WHITE_ENEMY 45
+  - first:
+      213: -5045143400279105942
+    second: WHITE_ENEMY 46
+  - first:
+      213: 6318772313842103143
+    second: WHITE_ENEMY 47
+  - first:
+      213: -5036147897761549910
+    second: WHITE_ENEMY 48
+  - first:
+      213: -8304282335188372592
+    second: WHITE_ENEMY 49
+  - first:
+      213: 8076081258652310949
+    second: WHITE_ENEMY 50
+  - first:
+      213: -2003331275037819428
+    second: WHITE_ENEMY 51
+  - first:
+      213: -1421516397498923126
+    second: WHITE_ENEMY 52
+  - first:
+      213: -8790062351025419029
+    second: WHITE_ENEMY 53
+  - first:
+      213: 4328247851468240150
+    second: WHITE_ENEMY 54
+  - first:
+      213: -353419746747452329
+    second: WHITE_ENEMY 55
+  - first:
+      213: 1065330876666142169
+    second: WHITE_ENEMY 56
+  - first:
+      213: 3533314146013434972
+    second: WHITE_ENEMY 57
+  - first:
+      213: -6188871900028973927
+    second: WHITE_ENEMY 58
+  - first:
+      213: 1789098553798183214
+    second: WHITE_ENEMY 59
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 3072
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WHITE_ENEMY 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecebd9222822310b0800000000000000
+      internalID: -5759221556154876210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fd5b3e084c606ff0800000000000000
+      internalID: -44916939541488137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 2
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7ddb1d07ea3643e0800000000000000
+      internalID: -2069902214698377859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 3
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96efb7a208bc01590800000000000000
+      internalID: -7705435211101897111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 4
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29a4b1327f81d7b50800000000000000
+      internalID: 6592452879265254034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 5
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f296c849595d07c20800000000000000
+      internalID: 3202294173479495983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 6
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8a14330a8305db60800000000000000
+      internalID: 7770120623391775373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 7
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4068186a0417bb590800000000000000
+      internalID: -7657402218928044540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ee615bd43ecfe590800000000000000
+      internalID: -7642663316211274010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40aeb05a95a9ac650800000000000000
+      internalID: 6253980742369143300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 10
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca54f2719ba86cc0800000000000000
+      internalID: -3717532851207120191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 11
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 734c6d96790eefe00800000000000000
+      internalID: 1080547901535863863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 12
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b60f449808bde590800000000000000
+      internalID: -7643250645590407498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 13
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5bd820b724d261a0800000000000000
+      internalID: -6817653618961228964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 14
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63772218832105cb0800000000000000
+      internalID: -4877378362548259018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 15
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17c910f9de05c4bc0800000000000000
+      internalID: -3797571404275016591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21db4e999c66145c0800000000000000
+      internalID: -4232989158695191278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 17
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 909c282f23b7e4720800000000000000
+      internalID: 2832336674409859337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 18
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0bdbe0a5444843e0800000000000000
+      internalID: -2069328962933499123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 19
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba961a10dcf948a0800000000000000
+      internalID: -6320242631316694346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 20
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72430fd5f0d4a2880800000000000000
+      internalID: -8635004607133633497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 21
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b51ae330ded13d8e0800000000000000
+      internalID: -1669958133025431205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 22
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72746aef67de65260800000000000000
+      internalID: 7086112159048288039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 23
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e420e85ee4b536c10800000000000000
+      internalID: 2045579050173203022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e8e21f6015b1c4b0800000000000000
+      internalID: -5421853394189752087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 25
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf38bb46e0aba4e0800000000000000
+      internalID: -1969303501071171648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 26
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d54ab4ebb3b8a70800000000000000
+      internalID: 8830217182888877317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 27
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7a47b8e48f40db40800000000000000
+      internalID: 5462953780259015292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 28
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a1c46f218a21550800000000000000
+      internalID: 6130146842199726724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 29
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9787b5d5f037fe0f0800000000000000
+      internalID: -1085522475345020807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 30
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e93cc1ae683fc34c0800000000000000
+      internalID: -4306299382894115938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 31
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f16538d082ccbde0800000000000000
+      internalID: -1315963132460047880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f5bbea477fe80a0800000000000000
+      internalID: -6877287500428386450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 33
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58c5aefba62857de0800000000000000
+      internalID: -1336018319447532411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 34
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec1aa6102c1478c0800000000000000
+      internalID: -4002543244680749853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 35
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4cce2b465cfd7650800000000000000
+      internalID: 6232414906909379658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 36
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb293a8bc5eacd70800000000000000
+      internalID: 9064309862396668910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 37
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0b5956f731a43cc0800000000000000
+      internalID: -3732180929454974198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 38
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e8bf655bd266d460800000000000000
+      internalID: 7266103742979619044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 39
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9a69e83a66d2b370800000000000000
+      internalID: 8336961611925908126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d637886bca2ea8910800000000000000
+      internalID: 1840532629158916973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 41
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3fdf53b0ba205e00800000000000000
+      internalID: 1031371253079859007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 42
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce4584aaa12a0460800000000000000
+      internalID: 7208611170348256967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 43
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0f9df17ea10c4aa0800000000000000
+      internalID: -6175559140283408625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 44
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da7e6b0b9951d0f0800000000000000
+      internalID: -1093994712027727146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 45
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca00ead0c11954440800000000000000
+      internalID: 4919497717646753964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 46
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e1579cecc0cf9b0800000000000000
+      internalID: -5045143400279105942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 47
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 763b12fe0f9c0b750800000000000000
+      internalID: 6318772313842103143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa1b79d6b220c1ab0800000000000000
+      internalID: -5036147897761549910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 49
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 093bb80d63341cc80800000000000000
+      internalID: -8304282335188372592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 50
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ad1927ad11041070800000000000000
+      internalID: 8076081258652310949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 51
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cddb0f7c1dcb234e0800000000000000
+      internalID: -2003331275037819428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 52
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a870fa43e52c54ce0800000000000000
+      internalID: -1421516397498923126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 53
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bec489d0ddc630680800000000000000
+      internalID: -8790062351025419029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 54
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 615bc962d76011c30800000000000000
+      internalID: 4328247851468240150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 55
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7547282ec96681bf0800000000000000
+      internalID: -353419746747452329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ddd0f7b9c0d8ce00800000000000000
+      internalID: 1065330876666142169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 57
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c545ef8de7ad80130800000000000000
+      internalID: 3533314146013434972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 58
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c40660cc5bc1aa0800000000000000
+      internalID: -6188871900028973927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WHITE_ENEMY 59
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e294e47d7a724d810800000000000000
+      internalID: 1789098553798183214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

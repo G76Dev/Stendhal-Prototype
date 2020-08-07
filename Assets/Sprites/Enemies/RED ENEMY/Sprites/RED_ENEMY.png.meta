@@ -1,0 +1,1532 @@
+fileFormatVersion: 2
+guid: f01cd9196c2840245aa943bf77f6c351
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5234885606522659372
+    second: RED_ENEMY 0
+  - first:
+      213: -7670556186895176900
+    second: RED_ENEMY 1
+  - first:
+      213: 7599181355763798281
+    second: RED_ENEMY 2
+  - first:
+      213: 741559739067795280
+    second: RED_ENEMY 3
+  - first:
+      213: -833844145253980827
+    second: RED_ENEMY 4
+  - first:
+      213: 1867856776051157277
+    second: RED_ENEMY 5
+  - first:
+      213: 5049183934726990790
+    second: RED_ENEMY 6
+  - first:
+      213: 3905469488548700389
+    second: RED_ENEMY 7
+  - first:
+      213: -3979447584432435329
+    second: RED_ENEMY 8
+  - first:
+      213: 8422631667010160370
+    second: RED_ENEMY 9
+  - first:
+      213: 1268523210585564627
+    second: RED_ENEMY 10
+  - first:
+      213: 4610599252514487665
+    second: RED_ENEMY 11
+  - first:
+      213: -2798306798067032503
+    second: RED_ENEMY 12
+  - first:
+      213: 1926090326881056822
+    second: RED_ENEMY 13
+  - first:
+      213: -8822928172658187954
+    second: RED_ENEMY 14
+  - first:
+      213: -4241566450996903505
+    second: RED_ENEMY 15
+  - first:
+      213: -442417741400882591
+    second: RED_ENEMY 16
+  - first:
+      213: -2730075868368233292
+    second: RED_ENEMY 17
+  - first:
+      213: 6196819593530169269
+    second: RED_ENEMY 18
+  - first:
+      213: 4266699211826913907
+    second: RED_ENEMY 19
+  - first:
+      213: -3578100159479238165
+    second: RED_ENEMY 20
+  - first:
+      213: -4366758347139789957
+    second: RED_ENEMY 21
+  - first:
+      213: -8118826318074019655
+    second: RED_ENEMY 22
+  - first:
+      213: -8074163070080726904
+    second: RED_ENEMY 23
+  - first:
+      213: -3801922820070277476
+    second: RED_ENEMY 24
+  - first:
+      213: 3176332476692142007
+    second: RED_ENEMY 25
+  - first:
+      213: 3494435492437615443
+    second: RED_ENEMY 26
+  - first:
+      213: 6842272517134630222
+    second: RED_ENEMY 27
+  - first:
+      213: -8921098673460991976
+    second: RED_ENEMY 28
+  - first:
+      213: -2540037776440523584
+    second: RED_ENEMY 29
+  - first:
+      213: -9131755172249997430
+    second: RED_ENEMY 30
+  - first:
+      213: -7934274388195615563
+    second: RED_ENEMY 31
+  - first:
+      213: 526892825499310000
+    second: RED_ENEMY 32
+  - first:
+      213: -3275694933970619365
+    second: RED_ENEMY 33
+  - first:
+      213: 8947732256168890976
+    second: RED_ENEMY 34
+  - first:
+      213: -1048898277594252256
+    second: RED_ENEMY 35
+  - first:
+      213: 3014773418136073614
+    second: RED_ENEMY 36
+  - first:
+      213: -5183047845402924536
+    second: RED_ENEMY 37
+  - first:
+      213: 5340642103131993285
+    second: RED_ENEMY 38
+  - first:
+      213: 1434338359109885941
+    second: RED_ENEMY 39
+  - first:
+      213: -5292861605493171253
+    second: RED_ENEMY 40
+  - first:
+      213: 1473940334787326177
+    second: RED_ENEMY 41
+  - first:
+      213: 3013017917811895622
+    second: RED_ENEMY 42
+  - first:
+      213: 8946003497186932641
+    second: RED_ENEMY 43
+  - first:
+      213: -8366325575326518260
+    second: RED_ENEMY 44
+  - first:
+      213: 7751482965988239361
+    second: RED_ENEMY 45
+  - first:
+      213: 358678694128445961
+    second: RED_ENEMY 46
+  - first:
+      213: 6333215686871564317
+    second: RED_ENEMY 47
+  - first:
+      213: 7627717698541477747
+    second: RED_ENEMY 48
+  - first:
+      213: -2859998692427443473
+    second: RED_ENEMY 49
+  - first:
+      213: 8569754532679990065
+    second: RED_ENEMY 50
+  - first:
+      213: -6306439509507989531
+    second: RED_ENEMY 51
+  - first:
+      213: -5777472547035144056
+    second: RED_ENEMY 52
+  - first:
+      213: 7863890258393039574
+    second: RED_ENEMY 53
+  - first:
+      213: -6869338999224744320
+    second: RED_ENEMY 54
+  - first:
+      213: 2667663656418285042
+    second: RED_ENEMY 55
+  - first:
+      213: -4537736843793161596
+    second: RED_ENEMY 56
+  - first:
+      213: 7366298014293191588
+    second: RED_ENEMY 57
+  - first:
+      213: -5109076548971411056
+    second: RED_ENEMY 58
+  - first:
+      213: 5753762614217484965
+    second: RED_ENEMY 59
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 3072
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RED_ENEMY 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c22a69839bc06a840800000000000000
+      internalID: 5234885606522659372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3b2072d9c5bc8590800000000000000
+      internalID: -7670556186895176900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 2
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901921e4e27b57960800000000000000
+      internalID: 7599181355763798281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 3
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0570eda57ac8a4a00800000000000000
+      internalID: 741559739067795280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 4
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565e814fa279d64f0800000000000000
+      internalID: -833844145253980827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 5
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d19e5db67d5fbe910800000000000000
+      internalID: 1867856776051157277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 6
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cbe203790e421640800000000000000
+      internalID: 5049183934726990790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 7
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e0621acec3033630800000000000000
+      internalID: 3905469488548700389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f4e97818926c8c0800000000000000
+      internalID: -3979447584432435329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6c81a40e233e470800000000000000
+      internalID: 8422631667010160370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 10
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d56a4c9323ba9110800000000000000
+      internalID: 1268523210585564627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 11
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17dbec797932cff30800000000000000
+      internalID: 4610599252514487665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 12
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94e57a01bca6a29d0800000000000000
+      internalID: -2798306798067032503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 13
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638bf0b82f8daba10800000000000000
+      internalID: 1926090326881056822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 14
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e412ce5a299ae8580800000000000000
+      internalID: -8822928172658187954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 15
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa18d1d19cde225c0800000000000000
+      internalID: -4241566450996903505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162487188673cd9f0800000000000000
+      internalID: -442417741400882591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 17
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bc9b085672dc1ad0800000000000000
+      internalID: -2730075868368233292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 18
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b7db8196968ff550800000000000000
+      internalID: 6196819593530169269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 19
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 372e164c35c563b30800000000000000
+      internalID: 4266699211826913907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 20
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1b87fccd8085ec0800000000000000
+      internalID: -3578100159479238165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 21
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7bc2ca5b682663c0800000000000000
+      internalID: -4366758347139789957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 22
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b00b16aa72245f80800000000000000
+      internalID: -8118826318074019655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 23
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 888c24d677fc2ff80800000000000000
+      internalID: -8074163070080726904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9e724ea65bdc3bc0800000000000000
+      internalID: -3801922820070277476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 25
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b795c10f89941c20800000000000000
+      internalID: 3176332476692142007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 26
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 353e249e09abe7030800000000000000
+      internalID: 3494435492437615443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 27
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4d3a383a92a4fe50800000000000000
+      internalID: 6842272517134630222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 28
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8182622c504e13480800000000000000
+      internalID: -8921098673460991976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 29
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c4803b9919ffbcd0800000000000000
+      internalID: -2540037776440523584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 30
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8fe33e8d0d754180800000000000000
+      internalID: -9131755172249997430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 31
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bcde154b7bc3e190800000000000000
+      internalID: -7934274388195615563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b79692bb36ef4700800000000000000
+      internalID: 526892825499310000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 33
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b14722c10d46a82d0800000000000000
+      internalID: -3275694933970619365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 34
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0625042741bbc2c70800000000000000
+      internalID: 8947732256168890976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 35
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02cb976e2909171f0800000000000000
+      internalID: -1048898277594252256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 36
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e857a4a6370a6d920800000000000000
+      internalID: 3014773418136073614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 37
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80aa7e0127d1218b0800000000000000
+      internalID: -5183047845402924536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 38
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c47da562b5cd1a40800000000000000
+      internalID: 5340642103131993285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 39
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff167e532bc7e310800000000000000
+      internalID: 1434338359109885941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcb964f996afb86b0800000000000000
+      internalID: -5292861605493171253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 41
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e07e1bdcec747410800000000000000
+      internalID: 1473940334787326177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 42
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64da01525d360d920800000000000000
+      internalID: 3013017917811895622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 43
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7ba3168c6962c70800000000000000
+      internalID: 8946003497186932641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 44
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04b5674737d4eb80800000000000000
+      internalID: -8366325575326518260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 45
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108683e30bcc29b60800000000000000
+      internalID: 7751482965988239361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 46
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ae6083f584af400800000000000000
+      internalID: 358678694128445961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 47
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1049e5cc1a14e750800000000000000
+      internalID: 6333215686871564317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37f568c55d81bd960800000000000000
+      internalID: 7627717698541477747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 49
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe2d7c7975e3f48d0800000000000000
+      internalID: -2859998692427443473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 50
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13b3facc752ede670800000000000000
+      internalID: 8569754532679990065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 51
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ef9946dda60b78a0800000000000000
+      internalID: -6306439509507989531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 52
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880266e245b42dfa0800000000000000
+      internalID: -5777472547035144056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 53
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d20c2c7686222d60800000000000000
+      internalID: 7863890258393039574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 54
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 086c87553943ba0a0800000000000000
+      internalID: -6869338999224744320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 55
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f5180d26f1750520800000000000000
+      internalID: 2667663656418285042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482a18de168b601c0800000000000000
+      internalID: -4537736843793161596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 57
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ab6c9304095a3660800000000000000
+      internalID: 7366298014293191588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 58
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 099c740a2f9e819b0800000000000000
+      internalID: -5109076548971411056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RED_ENEMY 59
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aa2b56ec9879df40800000000000000
+      internalID: 5753762614217484965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

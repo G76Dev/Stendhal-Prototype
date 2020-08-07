@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Enemy : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Enemy : MonoBehaviour
     private bool vulnerable; //Booleano que determina si el enemigo puede recibir daño en su estado actual.
 
     private CharacterController controller;
-
+    private NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,15 @@ public class Enemy : MonoBehaviour
         currentHealth = maxHealth;
         vulnerable = true;
 
+        agent = GetComponent<NavMeshAgent>();
         controller = GetComponent<CharacterController>();
         //controller.detectCollisions = false;
     }
 
     public void takeDamage(int damage)
     {
+        print("hit");
+
         if (vulnerable) //Si el enemigo es vulnerable,
         {
             currentHealth -= damage;
@@ -37,6 +41,8 @@ public class Enemy : MonoBehaviour
                 Die(); //Si el HP se reduce por debajo de 0, el enemigo muere.
             }      
         }
+
+        agent.SetDestination(new Vector3(55, -8, -24));
     }
 
     private void Die()
@@ -49,4 +55,9 @@ public class Enemy : MonoBehaviour
         this.enabled = false;
     }
 
+
+    private void FixedUpdate()
+    {
+        //animator.SetFloat("Speed", agent.speed);
+    }
 }

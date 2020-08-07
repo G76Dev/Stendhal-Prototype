@@ -1,0 +1,1532 @@
+fileFormatVersion: 2
+guid: 5c6a0e416a310e142896e019c5a9c3f0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2993085241262355894
+    second: PURPLE_ENEMY 0
+  - first:
+      213: -7275150550107350020
+    second: PURPLE_ENEMY 1
+  - first:
+      213: 4042143556654866166
+    second: PURPLE_ENEMY 2
+  - first:
+      213: 5355831625616916880
+    second: PURPLE_ENEMY 3
+  - first:
+      213: -7288980384949426737
+    second: PURPLE_ENEMY 4
+  - first:
+      213: -2489370165310338327
+    second: PURPLE_ENEMY 5
+  - first:
+      213: 275980679604030896
+    second: PURPLE_ENEMY 6
+  - first:
+      213: -3300417985699222554
+    second: PURPLE_ENEMY 7
+  - first:
+      213: 8007658641030122530
+    second: PURPLE_ENEMY 8
+  - first:
+      213: 7309553609149416517
+    second: PURPLE_ENEMY 9
+  - first:
+      213: 9173301065711737116
+    second: PURPLE_ENEMY 10
+  - first:
+      213: 4968711193877707607
+    second: PURPLE_ENEMY 11
+  - first:
+      213: 1078177845522175052
+    second: PURPLE_ENEMY 12
+  - first:
+      213: -3829046481651188897
+    second: PURPLE_ENEMY 13
+  - first:
+      213: 2885646347159763784
+    second: PURPLE_ENEMY 14
+  - first:
+      213: -1362551000345313645
+    second: PURPLE_ENEMY 15
+  - first:
+      213: 4642865670045070259
+    second: PURPLE_ENEMY 16
+  - first:
+      213: -3802086264934814969
+    second: PURPLE_ENEMY 17
+  - first:
+      213: 5841865739984701995
+    second: PURPLE_ENEMY 18
+  - first:
+      213: -5808020514232625110
+    second: PURPLE_ENEMY 19
+  - first:
+      213: 5244543250265017422
+    second: PURPLE_ENEMY 20
+  - first:
+      213: -3303608491023328072
+    second: PURPLE_ENEMY 21
+  - first:
+      213: 1619347955622780028
+    second: PURPLE_ENEMY 22
+  - first:
+      213: 3902277862382430592
+    second: PURPLE_ENEMY 23
+  - first:
+      213: 2275433556561523902
+    second: PURPLE_ENEMY 24
+  - first:
+      213: -3962393124439660225
+    second: PURPLE_ENEMY 25
+  - first:
+      213: 3289044261152260682
+    second: PURPLE_ENEMY 26
+  - first:
+      213: -3797046757474945406
+    second: PURPLE_ENEMY 27
+  - first:
+      213: -3206737508154064837
+    second: PURPLE_ENEMY 28
+  - first:
+      213: 4155716794534431191
+    second: PURPLE_ENEMY 29
+  - first:
+      213: 6241550634738308154
+    second: PURPLE_ENEMY 30
+  - first:
+      213: -2038121513207740613
+    second: PURPLE_ENEMY 31
+  - first:
+      213: -2995133113305933877
+    second: PURPLE_ENEMY 32
+  - first:
+      213: 8224243141191558591
+    second: PURPLE_ENEMY 33
+  - first:
+      213: -4494000877168523145
+    second: PURPLE_ENEMY 34
+  - first:
+      213: 5048045079148985619
+    second: PURPLE_ENEMY 35
+  - first:
+      213: -970764934118097446
+    second: PURPLE_ENEMY 36
+  - first:
+      213: 8648813235302865755
+    second: PURPLE_ENEMY 37
+  - first:
+      213: 5155337608814326573
+    second: PURPLE_ENEMY 38
+  - first:
+      213: -8958569029562160262
+    second: PURPLE_ENEMY 39
+  - first:
+      213: -7880512391820475890
+    second: PURPLE_ENEMY 40
+  - first:
+      213: -1345970950385529030
+    second: PURPLE_ENEMY 41
+  - first:
+      213: 1498327288039709164
+    second: PURPLE_ENEMY 42
+  - first:
+      213: 8978185779197990208
+    second: PURPLE_ENEMY 43
+  - first:
+      213: 605741246583658236
+    second: PURPLE_ENEMY 44
+  - first:
+      213: -9219910226914045690
+    second: PURPLE_ENEMY 45
+  - first:
+      213: 4722305678838058305
+    second: PURPLE_ENEMY 46
+  - first:
+      213: -6420132492527506228
+    second: PURPLE_ENEMY 47
+  - first:
+      213: -2016984213692805109
+    second: PURPLE_ENEMY 48
+  - first:
+      213: 8421880730274522010
+    second: PURPLE_ENEMY 49
+  - first:
+      213: -8607188093808564940
+    second: PURPLE_ENEMY 50
+  - first:
+      213: -8203007235074069212
+    second: PURPLE_ENEMY 51
+  - first:
+      213: 6512918470260952558
+    second: PURPLE_ENEMY 52
+  - first:
+      213: -4536150848171170159
+    second: PURPLE_ENEMY 53
+  - first:
+      213: 8365716076979685512
+    second: PURPLE_ENEMY 54
+  - first:
+      213: -163160385697540167
+    second: PURPLE_ENEMY 55
+  - first:
+      213: -5060465169092118765
+    second: PURPLE_ENEMY 56
+  - first:
+      213: 6333931690598669964
+    second: PURPLE_ENEMY 57
+  - first:
+      213: 2019563252741461819
+    second: PURPLE_ENEMY 58
+  - first:
+      213: -806182192078421722
+    second: PURPLE_ENEMY 59
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 3072
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ac714c4dc6676d0800000000000000
+      internalID: -2993085241262355894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 1
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfb1d5dbe19790b90800000000000000
+      internalID: -7275150550107350020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 2
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fe1c890624981830800000000000000
+      internalID: 4042143556654866166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 3
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09103b1bc7cb35a40800000000000000
+      internalID: 5355831625616916880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 4
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc5ac4465f658da90800000000000000
+      internalID: -7288980384949426737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 5
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eac83e160bf37dd0800000000000000
+      internalID: -2489370165310338327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 6
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd4ba447fa74d300800000000000000
+      internalID: 275980679604030896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 7
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2688
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb6610145f8232d0800000000000000
+      internalID: -3300417985699222554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22c003d8b1be02f60800000000000000
+      internalID: 8007658641030122530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5448604a740c07560800000000000000
+      internalID: 7309553609149416517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 10
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c19d57f87bc1e4f70800000000000000
+      internalID: 9173301065711737116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 11
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75b7696618864f440800000000000000
+      internalID: 4968711193877707607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 12
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c449b0fb90576fe00800000000000000
+      internalID: 1078177845522175052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 13
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5bb8b8138e7cdac0800000000000000
+      internalID: -3829046481651188897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 14
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b7cdd5010eb0820800000000000000
+      internalID: 2885646347159763784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 15
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 2304
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e7014951f371de0800000000000000
+      internalID: -1362551000345313645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b374ea5ab5ce6040800000000000000
+      internalID: 4642865670045070259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 17
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b2b25bfa64c3bc0800000000000000
+      internalID: -3802086264934814969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 18
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2a005160f9721150800000000000000
+      internalID: 5841865739984701995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 19
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a289bf05d14c56fa0800000000000000
+      internalID: -5808020514232625110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 20
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4c0831ac4c58c840800000000000000
+      internalID: 5244543250265017422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 21
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc1797a4993722d0800000000000000
+      internalID: -3303608491023328072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 22
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7c96aec264197610800000000000000
+      internalID: 1619347955622780028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 23
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1920
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089ec2a6a0da72630800000000000000
+      internalID: 3902277862382430592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb47ad093c6f39f10800000000000000
+      internalID: 2275433556561523902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 25
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39e25d6270c209c0800000000000000
+      internalID: -3962393124439660225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 26
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a428484545805ad20800000000000000
+      internalID: 3289044261152260682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 27
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2863829771e2e4bc0800000000000000
+      internalID: -3797046757474945406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 28
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b304e82f9316f73d0800000000000000
+      internalID: -3206737508154064837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 29
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9895d18621ca930800000000000000
+      internalID: 4155716794534431191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 30
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a34d03fab317e9650800000000000000
+      internalID: 6241550634738308154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 31
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1536
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b37cb2c384327b3e0800000000000000
+      internalID: -2038121513207740613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc7d3666d462f66d0800000000000000
+      internalID: -2995133113305933877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 33
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb56a212091622270800000000000000
+      internalID: 8224243141191558591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 34
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7788310330a12a1c0800000000000000
+      internalID: -4494000877168523145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 35
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31d75d8f0424e0640800000000000000
+      internalID: 5048045079148985619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 36
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: add3c7d8f662782f0800000000000000
+      internalID: -970764934118097446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 37
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b9cea60d1c60870800000000000000
+      internalID: 8648813235302865755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 38
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d23f696bd307b8740800000000000000
+      internalID: 5155337608814326573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 39
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 1152
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ba121aee4cca380800000000000000
+      internalID: -8958569029562160262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e020a7d7bbbc2a290800000000000000
+      internalID: -7880512391820475890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 41
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f86484d86225de0800000000000000
+      internalID: -1345970950385529030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 42
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce991e0eab02bc410800000000000000
+      internalID: 1498327288039709164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 43
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0455f80d56ce89c70800000000000000
+      internalID: 8978185779197990208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 44
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf6db645476086800800000000000000
+      internalID: 605741246583658236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 45
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6011ccf6f7c4c0080800000000000000
+      internalID: -9219910226914045690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 46
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14dc3fbbefff88140800000000000000
+      internalID: 4722305678838058305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 47
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 768
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccc64fb638b17e6a0800000000000000
+      internalID: -6420132492527506228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0015494b8b3204e0800000000000000
+      internalID: -2016984213692805109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 49
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9368b437e780e470800000000000000
+      internalID: 8421880730274522010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 50
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 435a19118002d8880800000000000000
+      internalID: -8607188093808564940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 51
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42d637f8160192e80800000000000000
+      internalID: -8203007235074069212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 52
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eed0cfe77d8826a50800000000000000
+      internalID: 6512918470260952558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 53
+      rect:
+        serializedVersion: 2
+        x: 1350
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 196ab2f46da5c01c0800000000000000
+      internalID: -4536150848171170159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 54
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8880624d27ef81470800000000000000
+      internalID: 8365716076979685512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 55
+      rect:
+        serializedVersion: 2
+        x: 1890
+        y: 384
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b715116e765cbdf0800000000000000
+      internalID: -163160385697540167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 317f60e7dbd95c9b0800000000000000
+      internalID: -5060465169092118765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 57
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8e19b16055a6e750800000000000000
+      internalID: 6333931690598669964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 58
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b375619041ee60c10800000000000000
+      internalID: 2019563252741461819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PURPLE_ENEMY 59
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 0
+        width: 270
+        height: 384
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6218be0519ddfc4f0800000000000000
+      internalID: -806182192078421722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

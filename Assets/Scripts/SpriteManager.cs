@@ -17,6 +17,15 @@ public class SpriteManager : MonoBehaviour
     {
         //sprites = (Sprite[])Resources.LoadAll(sheetname);
         sr = GetComponent<SpriteRenderer>();
+
+        //SHADOW 'SHADER'
+        //SOLO FUNCIONA SI SE LE ASIGNA AL SPRITE RENDERER EL MATERIAL ADECUADO
+        Renderer renderer = GetComponent<Renderer>();
+        if (renderer == null)
+            Debug.Log("Renderer is empty");
+        GetComponent<Renderer>().shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.TwoSided;
+        GetComponent<Renderer>().receiveShadows = true;
+
     }
 
     void ChangeSprite(int index)

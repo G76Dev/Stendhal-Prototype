@@ -73,7 +73,10 @@ public class MovementController : MonoBehaviour
     public void OnJump()
     {
         if (isGrounded)
+        {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity); //Formula de salto 'realista' basada en físicas y en la elevación deseada del salto
+            animator.SetBool("isJumping", true); //reproduce la animación de salto
+        }
 
     }
 
@@ -87,7 +90,7 @@ public class MovementController : MonoBehaviour
                                        dashDistance * new Vector3((Mathf.Log(1f / (Time.deltaTime * drag.x + 1)) / -Time.deltaTime),
                                                                   0,//^No entiendo muy bien por qué, pero a mayor el drag, mayor el dash en este caso.
                                                                   (Mathf.Log(1f / (Time.deltaTime * drag.z + 1)) / -Time.deltaTime)));
-
+            animator.SetBool("isDashing", true); //Reproduce la animacion de dash. El booleano se pondrá automaticamente a false cuando acabe la animación gracias al 'DashBehaviour' (consultar animator para + info)
             StartCoroutine(dashCooldown(dashCooldownTime)); //Ponemos en cooldown el dash.
         }
     }
@@ -177,11 +180,6 @@ public class MovementController : MonoBehaviour
 
     #endregion
 
-    private void Update()
-    {
-       
-    }
-
     void FixedUpdate()
     {
         //DETECCION DE COLISIONES
@@ -192,6 +190,12 @@ public class MovementController : MonoBehaviour
         {
             velocity.y = -2f; //Resetea la velocidad a -2 para que no se incremente indefinidamente.
             //No se coloca a 0 porque pueden darse casos en los que isGrounded sea true antes de que el jugador esté verdaderamente en el suelo.
+            animator.SetBool("JumpDown", false); //Sirve para detener la animación de salto
+        }
+        else if (velocity.y < -10 || (animator.GetCurrentAnimatorStateInfo(0).IsName("JumpUp") && velocity.y < 0)) //Siempre que la velocidad sea inferior a -1, reproduce la animación de 'caida'. Sirve para saltos y para dejarse caer
+        {
+            animator.SetBool("isJumping", false);
+            animator.SetBool("JumpDown",true); //En el momento en que la animación pasa de subir a bajar, cambia los booleanos para producir un cambio de estado en el animator.
         }
 
         //MOVIMIENTO
