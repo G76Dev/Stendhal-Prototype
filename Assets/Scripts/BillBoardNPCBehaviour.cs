@@ -43,8 +43,8 @@ public class BillBoardNPCBehaviour : MonoBehaviour
         //^Esto nos dice si la cámara mira al jugador fijamente (valor positivo) o desde atrás (valor negativo)
 
         //Una vez tenemos esa relación numérica, se la envíamos al Animator para que la interprete dentro de su animation tree.
-        animator.SetFloat("CameraVertical", direction);
-        animator.SetFloat("CameraHorizontal", Vector3.Cross(NPCTransform.forward, dir).y);
+        animator.SetFloat("CamOrientation", direction);
+        animator.SetFloat("PositiveCrossY", Vector3.Cross(NPCTransform.forward, dir).y);
         //^El resultado de ese producto de vectores nos dirá si la cámara mira al jugador desde su derecha (valor positivo) o desde su izquierda (valor negativo)
 
     }
