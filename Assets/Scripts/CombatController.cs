@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(MovementController))]
+[RequireComponent(typeof(PlayerInput))]
 public class CombatController : MonoBehaviour
 {
     [Header("References", order = 0)]
@@ -22,6 +23,7 @@ public class CombatController : MonoBehaviour
     private Transform playerTransform; //Transform del objeto 3D invisible que representa la lógica del jugador en el mundo
     private ForceApplier forceApplier; //Script dedicado a aplicar 'impulsos' a character controllers
     private MovementController movementController;
+    private PlayerInput playerInput;
 
     [Header("Combat variables", order = 2)]
     [Tooltip("Impulso añadido al jugador cuando éste ataca")] [SerializeField] float attackImpulse = 1f;
@@ -33,10 +35,11 @@ public class CombatController : MonoBehaviour
         movementController = GetComponent<MovementController>();
         playerTransform = GetComponent<Transform>();
         forceApplier = GetComponent<ForceApplier>();
+        playerInput = GetComponent<PlayerInput>();
 
         noOfTaps = 0;
         canAttack = true;
-        
+
     }
 
     //EVENTS
@@ -54,9 +57,11 @@ public class CombatController : MonoBehaviour
     public void OnAttack()
     {
         if (canAttack)
-        { 
+        {
             noOfTaps++; //En cada paso del combo, si se puede atacar, acumula un "tap"
-            playerTransform.LookAt(new Vector3(attackPointer.position.x, playerTransform.position.y, attackPointer.position.z));
+
+            if (playerInput.currentControlScheme == "Keyboard + mouse") //Si se está usando ratón y teclado, apunta el ataque en la dirección del ratón.
+                playerTransform.LookAt(new Vector3(attackPointer.position.x, playerTransform.position.y, attackPointer.position.z));
         }
 
         if (noOfTaps == 1) //Si el número de  taps es exactamente 1,
@@ -80,6 +85,17 @@ public class CombatController : MonoBehaviour
     void Update()
     {
         RotatePointer();
+
+        //Muestra el puntero de ataque únicamente si se está utilizando ratón y teclado
+        if (playerInput.currentControlScheme == "Keyboard + mouse")
+        {
+            attackPointer.gameObject.SetActive(true);
+        }
+        else
+        {
+            attackPointer.gameObject.SetActive(false);
+        }
+
     }
 
     /// <summary>
@@ -91,14 +107,14 @@ public class CombatController : MonoBehaviour
         RaycastHit rayCollisionPoint; //Punto del rayo en el que éste colisiona con el 'groundPlane'
 
 
-        if(Physics.Raycast(cameraRay,out rayCollisionPoint, hitLayers)) //Si al proyectar el rayo colisiona con algún punto de las 'hitLayer', devuelve el punto del rayo donde se produce la intersección
+        if (Physics.Raycast(cameraRay, out rayCollisionPoint, hitLayers)) //Si al proyectar el rayo colisiona con algún punto de las 'hitLayer', devuelve el punto del rayo donde se produce la intersección
         {
             //Actualmente, se ha predispuesto un plano 'Ground Plane' dentro del objeto jugador al nivel de sus pies cuya layer es 'Ground'. Es el único objeto con el que puede chocar el rayo,
             //de forma que el puntero siempre mirará en la dirección correcta gracias a que este plano invisible está a los pies del jugador y cubre un amplio rango de espacio.
             Vector3 pointToLookAt = rayCollisionPoint.point; //Y transforma ese punto en un vector3 que nos diga a qué punto del despacio debe mirar el Pointer
             Debug.DrawLine(cameraRay.origin, pointToLookAt, Color.blue); //Debug line para corroborar todo lo anterior
 
-            attackPointerContainer.LookAt(new Vector3 (pointToLookAt.x, transform.position.y, pointToLookAt.z)); //Finalmente, hacemos que el pointer mire hacia ese punto rotándolo únicamente en los ejes X y Z, manteniendo su altura Y
+            attackPointerContainer.LookAt(new Vector3(pointToLookAt.x, transform.position.y, pointToLookAt.z)); //Finalmente, hacemos que el pointer mire hacia ese punto rotándolo únicamente en los ejes X y Z, manteniendo su altura Y
         }
     }
 
@@ -118,7 +134,7 @@ public class CombatController : MonoBehaviour
         //todo: buscar una implementación más cómoda y escalable que permita crear nuevos combos más fácilmente
         canAttack = false; //Ponemos "canAttack" a false durante la comprobación del estado del combo. Una vez lo sepamos, lo volveremos a poner a true. Así evitamos malas lecutras.
 
-        if(weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName("Slash1") && noOfTaps == 1)
+        if (weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName("Slash1") && noOfTaps == 1)
         {
             //Si no se han registrado nuevos "taps" antes de haber llegado a este punto en la animación, vuelve a "idle" y corta el combo.
             weaponAnimator.SetInteger("Animation", 0);
@@ -136,7 +152,7 @@ public class CombatController : MonoBehaviour
             canAttack = true;
             //StartCoroutine(cooldownMovement()); //Detiene en seco al jugador al poner canMove a falso durante un corto lapso de tiempo.
             forceApplier.AddImpact(playerTransform.forward, attackImpulse);//AÑADIR IMPULSO
-        } 
+        }
         else if (weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName("Slash2") && noOfTaps == 2)
         {
             //Si durante el segundo ataque no se han registrado nuevos taps, eso quiere decir que el jugador no quiere continuar el combo. Volvemos a idle.
@@ -145,7 +161,7 @@ public class CombatController : MonoBehaviour
             movementController.canDash = true;
             StartCoroutine(attackCooldown(weaponBehaviour.getCooldown())); //El cooldown entre ataques viene definido por el arma del usuario.
             noOfTaps = 0; //Como el combo ha terminado, reseteamos esta variable.
-        } 
+        }
         else if (weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName("Slash2") && noOfTaps >= 3)
         {
             //Si se han registrado nuevos taps durante el segundo ataque, eso quiere decir que el jugador quiere continuar con el combo.
@@ -166,7 +182,8 @@ public class CombatController : MonoBehaviour
             //IDEA: Asignar el knockback y el daño individual de cada ataque del combo mediante eventos en las propias animaciones!
             StartCoroutine(attackCooldown(weaponBehaviour.getCooldown())); //El cooldown entre ataques viene definido por el arma del usuario.
             noOfTaps = 0; //Como el combo ha terminado, reseteamos esta variable.
-        } else
+        }
+        else
         {
             weaponAnimator.SetInteger("Animation", 0);
             movementController.canMove = true;

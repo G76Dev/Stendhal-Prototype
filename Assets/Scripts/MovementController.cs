@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(PlayerInput))]
 ///Script encargado de gestionar el input y el movimiento del jugador.
 public class MovementController : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class MovementController : MonoBehaviour
     [Tooltip("Layer que contiene los objetos que se identificarán como 'suelo'")] [SerializeField] LayerMask groundMask;
     [Tooltip("Punto en el espacio donde se proyecta la esfera que detectará si el jugador está tocando el suelo")] [SerializeField] Transform groundCheck;
     private CharacterController controller;
+    private PlayerInput playerInput;
 
 
     [Header("Movement variables", order = 1)]
@@ -47,6 +49,7 @@ public class MovementController : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        playerInput = GetComponent<PlayerInput>();
         //Esta linea cambia el estado del cursor cuando se está jugando, escondiéndolo y bloqueándolo en el centro de la ventana, para que no se vea y no estorbe.
         Cursor.lockState = CursorLockMode.Confined;
         canSnapCamera = true;
@@ -211,7 +214,17 @@ public class MovementController : MonoBehaviour
 
             if (canMove) //Si puede moverse, aplica el movimimiento en función del moveDir calculado.
             {
-                controller.Move(moveDir.normalized * speed * Time.deltaTime); //Mueve el personaje en dicha direccion, tomando en cuenta su velocidad y haciendolo independiente del framerate
+                //Mueve el personaje en dicha direccion, tomando en cuenta su velocidad y haciendolo independiente del framerate
+                if (playerInput.currentControlScheme == "Controller") //Si se está usando mando,
+                {
+                    //La velocidad de movimiento dependerá de cuánto se haya movido el joystick
+                    controller.Move(moveDir.normalized * direction.magnitude * speed * Time.deltaTime); 
+                } 
+                else //En cualquier otro caso, la velocidad es fija.
+                {
+                    controller.Move(moveDir.normalized * speed * Time.deltaTime);
+                }
+
             }
             else //Si no, para en seco al jugador.
             {

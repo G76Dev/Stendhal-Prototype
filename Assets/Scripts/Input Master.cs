@@ -97,6 +97,17 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""64f16834-22c6-4111-b27c-ca6c936810fc"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""28025995-b55b-4960-8fb8-f97a48211521"",
                     ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
@@ -108,11 +119,33 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""94854ab5-8895-4cb7-bbe2-6070b95a5bac"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""2d79d60b-cc01-4a35-9597-12bd1a8b2caa"",
                     ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard + mouse"",
+                    ""action"": ""CameraSnapLeft"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""34c309d9-d426-4b36-889e-ee5c8a9ed511"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
                     ""action"": ""CameraSnapLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -229,11 +262,33 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""5fafa690-a9bf-41ad-92ce-6192e873d7eb"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""6021c6f3-b6d8-431c-8430-5370f41c9abd"",
                     ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard + mouse"",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c43edbd6-5297-416e-8ef3-00f5e33290eb"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -251,11 +306,33 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""61a370e3-2bf2-4433-bd2a-a47b63b34363"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""MouseAim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""50b7aff6-0bfb-4522-83f3-8cf8cf783048"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard + mouse"",
+                    ""action"": ""CameraSnapRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b1a4170a-f53d-492d-96c4-274897fb8cf5"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
                     ""action"": ""CameraSnapRight"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -281,6 +358,28 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""Dash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""caa0765b-b918-4f98-9345-255f7c742c81"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7badecb2-0f55-46c5-b6df-4f8d3c356396"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -297,6 +396,17 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 },
                 {
                     ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Controller"",
+            ""bindingGroup"": ""Controller"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
                     ""isOptional"": false,
                     ""isOR"": false
                 }
@@ -455,6 +565,15 @@ public class @InputMaster : IInputActionCollection, IDisposable
         {
             if (m_KeyboardmouseSchemeIndex == -1) m_KeyboardmouseSchemeIndex = asset.FindControlSchemeIndex("Keyboard + mouse");
             return asset.controlSchemes[m_KeyboardmouseSchemeIndex];
+        }
+    }
+    private int m_ControllerSchemeIndex = -1;
+    public InputControlScheme ControllerScheme
+    {
+        get
+        {
+            if (m_ControllerSchemeIndex == -1) m_ControllerSchemeIndex = asset.FindControlSchemeIndex("Controller");
+            return asset.controlSchemes[m_ControllerSchemeIndex];
         }
     }
     public interface IPlayerActions
