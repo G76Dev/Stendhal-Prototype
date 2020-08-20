@@ -68,6 +68,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Block",
+                    "type": "Button",
+                    "id": "2d021332-1228-416e-9b94-fad2805cf03f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -272,7 +280,7 @@
                 {
                     "name": "",
                     "id": "c43edbd6-5297-416e-8ef3-00f5e33290eb",
-                    "path": "<Gamepad>/buttonEast",
+                    "path": "<Gamepad>/buttonNorth",
                     "interactions": "",
                     "processors": "",
                     "groups": "Controller",
@@ -365,6 +373,28 @@
                     "processors": "",
                     "groups": "Controller",
                     "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "680944b1-4c16-490a-ad2e-65a0d929891d",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard + mouse",
+                    "action": "Block",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "62bad15f-527b-4285-800e-b287954af5a3",
+                    "path": "<Gamepad>/buttonEast",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Block",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

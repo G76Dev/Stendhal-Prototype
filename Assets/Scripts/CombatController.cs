@@ -26,8 +26,13 @@ public class CombatController : MonoBehaviour
     private PlayerInput playerInput;
 
     [Header("Combat variables", order = 2)]
+    [SerializeField] int maxHealth = 150;
     [Tooltip("Impulso añadido al jugador cuando éste ataca")] [SerializeField] float attackImpulse = 1f;
-    private bool canAttack;
+    private int health;
+    private HealthBarController healthBar;
+    [HideInInspector] public bool canAttack;
+    [HideInInspector] public bool isVulnerable;
+    [HideInInspector] public bool isBlocking;
     private int noOfTaps; //Número de taps o clicks que ha realizado el jugador desde que comenzó su combo de ataque.
 
     private void Start()
@@ -36,9 +41,14 @@ public class CombatController : MonoBehaviour
         playerTransform = GetComponent<Transform>();
         forceApplier = GetComponent<ForceApplier>();
         playerInput = GetComponent<PlayerInput>();
+        healthBar = FindObjectOfType<HealthBarController>();
 
         noOfTaps = 0;
         canAttack = true;
+        isVulnerable = true;
+        isBlocking = false;
+        health = maxHealth;
+        healthBar.setMaxHealth(maxHealth);
 
     }
 
@@ -73,6 +83,15 @@ public class CombatController : MonoBehaviour
             movementController.canDash = false;
             weaponAnimator.SetInteger("Animation", 1);
             forceApplier.AddImpact(playerTransform.forward, attackImpulse);//AÑADIR IMPULSO
+        }
+    }
+
+    public void OnBlock()
+    {
+        if(movementController.canMove)
+        {
+            animator.SetTrigger("isBlocking");
+            //El StateMachineBehaviour 'PlayerBlockingBehaviour' se ocupará de gestionar el resto de variables relacionadas con el bloqueo.
         }
     }
 
@@ -118,11 +137,45 @@ public class CombatController : MonoBehaviour
         }
     }
 
-    IEnumerator attackCooldown(float sec)
+    public void takeDamage(int damage, float knockbackForce, Vector3 knockbackDir, GameObject other)
     {
-        canAttack = false;
-        yield return new WaitForSeconds(sec);
-        canAttack = true;
+        //Check if blocking & vulnerability
+        if (!isBlocking && isVulnerable)
+        {
+            //Reduce health
+            health = health - damage;
+            healthBar.setHealth(health);
+            if (health <= 0)
+            {
+                //Die & play die animation
+                movementController.canMove = false;
+            }
+            //Hit VFX
+
+            //Look at enemy
+            transform.LookAt(new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z));
+
+            //Apply knockback received from the 'other' who attacks
+            if (knockbackForce != 0)
+                forceApplier.AddImpact(new Vector3(knockbackDir.x, 0, knockbackDir.z), knockbackForce);
+
+            //Play Hurt animation. The animator state machine bheaviour takes care of making the player invulnerable && unmovile during the hurt time window
+            animator.SetTrigger("isHurt");
+        } 
+        else if (isBlocking)
+        {
+            //Look at enemy
+            transform.LookAt(new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z));
+
+            animator.SetTrigger("isBlocking");//Cada vez que el jugador bloquea un golpe con éxito, el tiempo de bloqueo se extiende.
+
+            //Aplica un tercio del knockback original del ataque.
+            if (knockbackForce != 0)
+                forceApplier.AddImpact(new Vector3(knockbackDir.x, 0, knockbackDir.z), knockbackForce/3);
+
+            //Play Block VFX
+        }
+
     }
 
     /// <summary>
@@ -191,6 +244,13 @@ public class CombatController : MonoBehaviour
             StartCoroutine(attackCooldown(weaponBehaviour.getCooldown())); //El cooldown entre ataques viene definido por el arma del usuario.
             noOfTaps = 0; //Como el combo ha terminado, reseteamos esta variable.
         }
+    }
+
+    IEnumerator attackCooldown(float sec)
+    {
+        canAttack = false;
+        yield return new WaitForSeconds(sec);
+        canAttack = true;
     }
 
     IEnumerator cooldownMovement()

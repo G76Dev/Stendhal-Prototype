@@ -28,7 +28,21 @@ public class ForceApplier : MonoBehaviour
     private void Update()
     {
         // apply the impact force:
-        if (impact.magnitude > 0.2) characterController.Move(impact * Time.deltaTime);
+        if (impact.magnitude > 0.2)
+        {
+            if(impact.y == 0)
+            {
+                //Solucion muy FEA pero que FUNCIONA. Copiando el valor 'y' anterior al movimiento y forzándolo de nuevo tras el movimiento, congelamos la posición 'y' del personaje.
+                //float yValue = characterController.transform.position.y;
+                characterController.Move(impact * Time.deltaTime);
+                //characterController.transform.position = new Vector3(characterController.transform.position.x, yValue, characterController.transform.position.z);
+            } 
+            else
+            {
+                characterController.Move(impact * Time.deltaTime);
+            }
+        }
+
         // consumes the impact energy each cycle:
         impact = Vector3.Lerp(impact, Vector3.zero, 5 * Time.deltaTime);
     }
