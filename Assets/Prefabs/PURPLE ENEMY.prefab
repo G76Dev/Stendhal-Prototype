@@ -10066,7 +10066,7 @@ MeshCollider:
   m_GameObject: {fileID: 2815543404939790484}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -10264,7 +10264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 20
-  knockback: 10
+  knockback: 30
 --- !u!1 &4603583583529287079
 GameObject:
   m_ObjectHideFlags: 0
@@ -10620,14 +10620,14 @@ GameObject:
   m_Component:
   - component: {fileID: 6984217531511365702}
   - component: {fileID: 466361927060538716}
+  - component: {fileID: 5986775508935652018}
   - component: {fileID: 2271896477052663845}
-  - component: {fileID: 3333044570755740964}
   - component: {fileID: 3333044571579300135}
   - component: {fileID: 2815543404582999238}
   m_Layer: 0
   m_Name: PURPLE ENEMY
   m_TagString: Enemy
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -10666,6 +10666,33 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5986775508935652018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6984217531511365703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50072fcbe5ba2224786c12d5fa1f21fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6984217532391845672}
+  maxHealth: 100
+  patrolSpots: []
+  nextSpot: 0
+  isPatrolling: 0
+  lookRadius: 10
+  damage: 0
+  knockback: 0
+  target: {fileID: 0}
+  agent: {fileID: 0}
+  forceApplier: {fileID: 0}
+  canAttack: 0
+  attackCooldownTime: 3
+  weapon: {fileID: 15855934}
+  attackCollider: {fileID: 4084268695585174165}
 --- !u!114 &2271896477052663845
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10679,36 +10706,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mass: 3
---- !u!114 &3333044570755740964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6984217531511365703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d07158d250a6629499242643e6414f49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 6984217532391845672}
-  weapon: {fileID: 15855934}
-  maxHealth: 9999999
-  patrolSpots:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  nextSpot: 0
-  isPatrolling: 0
-  lookRadius: 10
-  attackCollider: {fileID: 2815543404582999238}
-  damage: 0
-  target: {fileID: 0}
-  agent: {fileID: 0}
-  forceApplier: {fileID: 0}
-  canAttack: 0
-  attackCooldownTime: 4
 --- !u!195 &3333044571579300135
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class CYAN_Attack_Behaviour : StateMachineBehaviour
 
     [SerializeField] float attackImpulse;
     [SerializeField] float attackSpeed;
-    [SerializeField] float attackDamage;
+    [SerializeField] int attackDamage;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

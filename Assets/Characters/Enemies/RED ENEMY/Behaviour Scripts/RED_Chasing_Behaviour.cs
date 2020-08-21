@@ -32,7 +32,6 @@ public class RED_Chasing_Behaviour : StateMachineBehaviour
             if (enemy.canAttack)
             {
                 animator.SetBool("isReadyToAttack", true);
-                enemy.StartCoroutine(enemy.cooldownAttack());
             }
         }
         else

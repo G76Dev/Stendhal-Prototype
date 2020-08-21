@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackingBehaviour : StateMachineBehaviour
 {
-    private Enemy enemy;
+    private MELEE_enemy enemy;
     private ForceApplier forceApplier;
     private GameObject target;
     private float yValue;
@@ -17,7 +17,7 @@ public class AttackingBehaviour : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //REFERENCIAS
-        enemy = animator.gameObject.GetComponentInParent<Enemy>();
+        enemy = animator.gameObject.GetComponentInParent<MELEE_enemy>();
         target = enemy.target;
         forceApplier = animator.gameObject.GetComponentInParent<ForceApplier>();
 

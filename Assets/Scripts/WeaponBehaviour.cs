@@ -30,8 +30,8 @@ public class WeaponBehaviour : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy") //Sólo podrá hacer daño a objetos con el tag 'Enemy'
         {
-            other.gameObject.GetComponent<Enemy>().takeDamage(damage); //Aplica el daño al enemigo
-            other.gameObject.GetComponent<ForceApplier>().AddImpact(impactVector.forward.normalized, knockback); //Aplica un knockback junto al golpe, en direcccion de la punta de la espada (impactVector)
+            other.gameObject.GetComponent<Enemy>().takeDamage(damage, knockback, RaycastOrigin.transform.forward, this.gameObject); //Aplica el daño al enemigo
+            //other.gameObject.GetComponent<ForceApplier>().AddImpact(impactVector.forward.normalized, knockback); //Aplica un knockback junto al golpe, en direcccion de la punta de la espada (impactVector)
             //^Ojo con esto que a veces se bugea y lanza al enemigo a la mierda.
 
             //Instanciación de partículas de golpe.

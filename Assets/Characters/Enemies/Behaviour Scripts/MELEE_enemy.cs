@@ -1,17 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
-using UnityEngine.AI;
-using UnityEngine.InputSystem;
 
-public class RANGED_enemy : Enemy
+public class MELEE_enemy : Enemy
 {
-    public GameObject projectile;
+    public GameObject weapon;
+    public Collider attackCollider;
+
 
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = Color.cyan;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, lookRadius);
     }
 }

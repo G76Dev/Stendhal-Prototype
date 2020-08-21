@@ -134,7 +134,7 @@ GameObject:
   m_Layer: 0
   m_Name: CYAN ENEMY
   m_TagString: Enemy
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 419385456094870383, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -186,19 +186,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4386169451322438995}
-  projectile: {fileID: 2571427375249778916, guid: 229a149bd17540945a41d074a2086188,
-    type: 3}
   maxHealth: 100
   patrolSpots: []
   nextSpot: 0
   isPatrolling: 0
   lookRadius: 10
   damage: 0
+  knockback: 0
   target: {fileID: 0}
   agent: {fileID: 0}
   forceApplier: {fileID: 0}
   canAttack: 0
   attackCooldownTime: 0
+  projectile: {fileID: 2571427375249778916, guid: 229a149bd17540945a41d074a2086188,
+    type: 3}
 --- !u!114 &4878881607224943198
 MonoBehaviour:
   m_ObjectHideFlags: 0

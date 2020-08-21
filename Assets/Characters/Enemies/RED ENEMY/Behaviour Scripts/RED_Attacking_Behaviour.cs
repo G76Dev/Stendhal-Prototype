@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RED_Attacking_Behaviour : StateMachineBehaviour
 {
-    private Enemy enemy;
+    private MELEE_enemy enemy;
     private ForceApplier forceApplier;
     private GameObject target;
 
@@ -17,7 +17,7 @@ public class RED_Attacking_Behaviour : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //REFERENCIAS
-        enemy = animator.gameObject.GetComponentInParent<Enemy>();
+        enemy = animator.gameObject.GetComponentInParent<MELEE_enemy>();
         target = enemy.target;
         forceApplier = animator.gameObject.GetComponentInParent<ForceApplier>();
 
@@ -35,12 +35,6 @@ public class RED_Attacking_Behaviour : StateMachineBehaviour
         Vector3 attackDir = (target.transform.position - enemy.transform.position).normalized;
         forceApplier.AddImpact(new Vector3(enemy.transform.forward.x, 0, enemy.transform.forward.z), attackImpulse);
 
-        if (enemy.weapon != null)
-        {
-            enemy.weapon.transform.LookAt(target.transform.position);
-            enemy.weapon.GetComponentInChildren<Animator>().SetTrigger("Attack"); //ESTO ESTA FEO Y HAY QUE HACERLO MAS BONITO
-        }
-
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -55,5 +49,7 @@ public class RED_Attacking_Behaviour : StateMachineBehaviour
         animator.SetBool("isAttacking", false);
         Physics.IgnoreCollision(target.GetComponent<CharacterController>(), enemy.GetComponent<CharacterController>(), false);
         enemy.attackCollider.enabled = false;
+        enemy.isVulnerable = true;
+        enemy.StartCoroutine(enemy.cooldownAttack());
     }
 }
