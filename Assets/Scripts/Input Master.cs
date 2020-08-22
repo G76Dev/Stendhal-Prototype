@@ -89,6 +89,22 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""LockOn"",
+                    ""type"": ""Button"",
+                    ""id"": ""1c695add-9e65-4075-ae01-a9441d9125e0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""ChangeLockOn"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""7d701f5a-344a-402f-931f-e68ce48dc8ff"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -369,17 +385,6 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""caa0765b-b918-4f98-9345-255f7c742c81"",
-                    ""path"": ""<Gamepad>/leftTrigger"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Controller"",
-                    ""action"": ""Dash"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""7badecb2-0f55-46c5-b6df-4f8d3c356396"",
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
@@ -408,6 +413,61 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": ""Controller"",
                     ""action"": ""Block"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6e13cc43-1184-4785-8210-9f8d1705986b"",
+                    ""path"": ""<Mouse>/middleButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard + mouse"",
+                    ""action"": ""LockOn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""72804386-6a25-45ba-b6d3-378ec2c3238b"",
+                    ""path"": ""<Keyboard>/g"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard + mouse"",
+                    ""action"": ""LockOn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f0dbc98f-9392-43f6-b2c9-7627839cc0f0"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": ""Tap"",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""LockOn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""524352a9-e1ee-4e6b-b445-67e37bbc37db"",
+                    ""path"": ""<Mouse>/scroll"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard + mouse"",
+                    ""action"": ""ChangeLockOn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8c55f0b5-5871-4692-b544-01a0c66f640b"",
+                    ""path"": ""<Gamepad>/dpad"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""ChangeLockOn"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -455,6 +515,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_Player_MouseAim = m_Player.FindAction("MouseAim", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
         m_Player_Block = m_Player.FindAction("Block", throwIfNotFound: true);
+        m_Player_LockOn = m_Player.FindAction("LockOn", throwIfNotFound: true);
+        m_Player_ChangeLockOn = m_Player.FindAction("ChangeLockOn", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -513,6 +575,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_MouseAim;
     private readonly InputAction m_Player_Dash;
     private readonly InputAction m_Player_Block;
+    private readonly InputAction m_Player_LockOn;
+    private readonly InputAction m_Player_ChangeLockOn;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -526,6 +590,8 @@ public class @InputMaster : IInputActionCollection, IDisposable
         public InputAction @MouseAim => m_Wrapper.m_Player_MouseAim;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
         public InputAction @Block => m_Wrapper.m_Player_Block;
+        public InputAction @LockOn => m_Wrapper.m_Player_LockOn;
+        public InputAction @ChangeLockOn => m_Wrapper.m_Player_ChangeLockOn;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -562,6 +628,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Block.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBlock;
                 @Block.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBlock;
                 @Block.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnBlock;
+                @LockOn.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLockOn;
+                @LockOn.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLockOn;
+                @LockOn.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnLockOn;
+                @ChangeLockOn.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeLockOn;
+                @ChangeLockOn.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeLockOn;
+                @ChangeLockOn.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChangeLockOn;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -593,6 +665,12 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Block.started += instance.OnBlock;
                 @Block.performed += instance.OnBlock;
                 @Block.canceled += instance.OnBlock;
+                @LockOn.started += instance.OnLockOn;
+                @LockOn.performed += instance.OnLockOn;
+                @LockOn.canceled += instance.OnLockOn;
+                @ChangeLockOn.started += instance.OnChangeLockOn;
+                @ChangeLockOn.performed += instance.OnChangeLockOn;
+                @ChangeLockOn.canceled += instance.OnChangeLockOn;
             }
         }
     }
@@ -626,5 +704,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         void OnMouseAim(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnBlock(InputAction.CallbackContext context);
+        void OnLockOn(InputAction.CallbackContext context);
+        void OnChangeLockOn(InputAction.CallbackContext context);
     }
 }

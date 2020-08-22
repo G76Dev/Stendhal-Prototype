@@ -1,8 +1,10 @@
-﻿using System;
+﻿using JetBrains.Annotations;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(MovementController))]
 [RequireComponent(typeof(PlayerInput))]
@@ -27,13 +29,21 @@ public class CombatController : MonoBehaviour
 
     [Header("Combat variables", order = 2)]
     [SerializeField] int maxHealth = 150;
-    [Tooltip("Impulso añadido al jugador cuando éste ataca")] [SerializeField] float attackImpulse = 1f;
     private int health;
     private HealthBarController healthBar;
+    private EnemyHealthBar enemyHPBar;
+    [Tooltip("Impulso añadido al jugador cuando éste ataca")] [SerializeField] float attackImpulse = 1f;
     [HideInInspector] public bool canAttack;
     [HideInInspector] public bool isVulnerable;
     [HideInInspector] public bool isBlocking;
     private int noOfTaps; //Número de taps o clicks que ha realizado el jugador desde que comenzó su combo de ataque.
+
+    //LOCK ON SYSTEM VARIABLES
+    private Enemy lockedEnemy;
+    private bool lockedOn;
+    [SerializeField] GameObject crosshair;
+    [SerializeField] GameObject lockedCrosshair;
+    private int enemyIndex = 0;
 
     private void Start()
     {
@@ -42,6 +52,7 @@ public class CombatController : MonoBehaviour
         forceApplier = GetComponent<ForceApplier>();
         playerInput = GetComponent<PlayerInput>();
         healthBar = FindObjectOfType<HealthBarController>();
+        enemyHPBar = FindObjectOfType<EnemyHealthBar>();
 
         noOfTaps = 0;
         canAttack = true;
@@ -70,8 +81,12 @@ public class CombatController : MonoBehaviour
         {
             noOfTaps++; //En cada paso del combo, si se puede atacar, acumula un "tap"
 
-            if (playerInput.currentControlScheme == "Keyboard + mouse") //Si se está usando ratón y teclado, apunta el ataque en la dirección del ratón.
-                playerTransform.LookAt(new Vector3(attackPointer.position.x, playerTransform.position.y, attackPointer.position.z));
+            //Hacemos que el jugador se oriente hacia su enemigo fijado, para que los combos sean fluidos y comodos de ejecutar.
+            if (lockedEnemy != null)
+                transform.LookAt(new Vector3(lockedEnemy.transform.position.x, transform.position.y, lockedEnemy.transform.position.z));
+
+            //if (playerInput.currentControlScheme == "Keyboard + mouse") //Si se está usando ratón y teclado, apunta el ataque en la dirección del ratón.
+            //    playerTransform.LookAt(new Vector3(attackPointer.position.x, playerTransform.position.y, attackPointer.position.z));
         }
 
         if (noOfTaps == 1) //Si el número de  taps es exactamente 1,
@@ -88,10 +103,71 @@ public class CombatController : MonoBehaviour
 
     public void OnBlock()
     {
-        if(movementController.canMove)
+        if (movementController.canMove)
         {
             animator.SetTrigger("isBlocking");
             //El StateMachineBehaviour 'PlayerBlockingBehaviour' se ocupará de gestionar el resto de variables relacionadas con el bloqueo.
+        }
+    }
+
+    public void OnLockOn()
+    {
+        if (!lockedOn)
+        {
+            if (lockedEnemy != null)
+            {
+                lockedOn = true;
+            }
+        }
+        else
+        {
+            lockedOn = false;
+        }
+
+    }
+
+    public void OnChangeLockOn(InputValue value)
+    {
+        if (lockedOn)
+        {
+            //VERSION EN TECLADO. CONTROL POR RUEDA DEL RATON
+            if (playerInput.currentControlScheme == "Keyboard + mouse")
+            {
+                var reading = value.Get<Vector2>().y;
+
+                if (reading > 0) //Si se mueve la rueda del ratón hacia delante,
+                {
+                    enemyIndex = (enemyIndex + 1) % CombatManager.CM.enemies.Count; //Aumenta el indice de la lista, manteniendolo siempre dentro del rango.
+                    lockedEnemy = CombatManager.CM.enemies[enemyIndex]; //Y fija el enemigo encontrado en ese indice.
+                }
+                else if (reading < 0) //Si se mueve hacia atrás la rueda del ratón,
+                {
+                    enemyIndex--; //Disminuye el indice de la lista.
+                    if (enemyIndex < 0) //Evita que el indice se salga del limite de la lista.
+                        enemyIndex = CombatManager.CM.enemies.Count - 1;
+
+                    lockedEnemy = CombatManager.CM.enemies[enemyIndex]; //Y fija el enemigo encontrado en ese indice.
+                }
+            } 
+            else if (playerInput.currentControlScheme == "Controller")
+            {
+                var reading = value.Get<Vector2>();
+
+                if (reading.magnitude > 0) //Si se mueve la rueda del ratón hacia delante,
+                {
+                    enemyIndex = (enemyIndex + 1) % CombatManager.CM.enemies.Count; //Aumenta el indice de la lista, manteniendolo siempre dentro del rango.
+                    lockedEnemy = CombatManager.CM.enemies[enemyIndex]; //Y fija el enemigo encontrado en ese indice.
+                }
+                else if (reading.magnitude < 0) //Si se mueve hacia atrás la rueda del ratón,
+                {
+                    enemyIndex--; //Disminuye el indice de la lista.
+                    if (enemyIndex < 0) //Evita que el indice se salga del limite de la lista.
+                        enemyIndex = CombatManager.CM.enemies.Count - 1;
+
+                    lockedEnemy = CombatManager.CM.enemies[enemyIndex]; //Y fija el enemigo encontrado en ese indice.
+                }
+
+            }
         }
     }
 
@@ -115,6 +191,136 @@ public class CombatController : MonoBehaviour
             attackPointer.gameObject.SetActive(false);
         }
 
+        //////////////////////////////////////////////////
+        //SISTEMA DE FIJADO
+        //////////////////////////////////////////////////
+
+        if (CombatManager.CM.onCombat) //Solo serán necesarias estas operaciones en caso de que estemos en un combate.
+        {
+            LockOnSystem();
+
+            if(lockedEnemy != null)
+            {
+                enemyHPBar.gameObject.SetActive(true);
+                lockedEnemy.visualizeHealth();
+            } 
+            else
+            {
+                enemyHPBar.gameObject.SetActive(false);
+            }
+
+        } 
+        else
+        {
+            enemyHPBar.gameObject.SetActive(false);
+            crosshair.SetActive(false);
+            lockedCrosshair.SetActive(false);
+        }
+
+
+
+    }
+
+    private void LockOnSystem()
+    {
+        float distanceToEnemy = 9000f;
+
+        if (!lockedOn) //FIJADO AUTOMÁTICO - SOLO EN CASO DE QUE EL JUGADOR NO HAYA FIJADO UN ENEMIGO.
+        {
+            lockedCrosshair.SetActive(false); //Por precaucion, desactivamos la mirlla fijada.
+            lockedEnemy = null; //En cada iteracion se limpia la variable, para buscar el mejor candidato en ese momento.
+                                //Adema, esto cumple el doble proposito de evitar que enemigos muertos permanezcan fijados.
+
+            if (playerInput.currentControlScheme == "Keyboard + mouse")
+            {
+                foreach (Enemy enemy in CombatManager.CM.enemies)
+                {
+                    //todo: Distinguir entre control por teclado y mando: en el control por mando, se utiliza la posición del jugador para el playerToEnemy,
+                    //pero en el control por teclado, se debe utilizar el puntero para realizar esa comparación.
+
+                    //Direccion entre el jugador y el enemigo
+                    Vector3 PlayerToEnemy = (enemy.transform.position - transform.position).normalized;
+
+                    if (Vector3.Dot(PlayerToEnemy, attackPointer.forward) > 0) //Si el producto entre esa direccion y el forward del jugador es positivo, eso significa que el jugador está en frente del enemigo.
+                    {
+                        //Los enemigos en frente del jugador tienen preferencia para ser fijados. De manera que no hay penalizacion.
+                        if (Vector3.Distance(this.transform.position, enemy.transform.position) < distanceToEnemy) //Si la distancia al enemigo es la más cercana que se ha visto hasta ahora,
+                        {
+                            lockedEnemy = enemy; //Fija a ese enemigo.
+                            distanceToEnemy = Vector3.Distance(this.transform.position, enemy.transform.position); //Y guarda esa distancia como la más corta.
+                        }
+                    }
+                    else //Si por el contrario el enemigo está detrás del jugador
+                    {
+                        //Se aplica una penalización en la comparacion de la distancia, para favorecer que los enemigos en frente del jugador sean fijados más facilmente.
+                        if ((Vector3.Distance(this.transform.position, enemy.transform.position) * 2) + 5 < (distanceToEnemy)) //Si incluso con la penalizacion es el candidato favorito,
+                        {
+                            lockedEnemy = enemy; //Fija a ese enemigo.
+                            distanceToEnemy = Vector3.Distance(this.transform.position, enemy.transform.position); //Y guarda esa distancia como la más corta.
+                        }
+                    }
+                }
+            }
+            else if (playerInput.currentControlScheme == "Controller")
+            {
+                foreach (Enemy enemy in CombatManager.CM.enemies)
+                {
+                    //Direccion entre el jugador y el enemigo
+                    Vector3 PlayerToEnemy = (enemy.transform.position - transform.position).normalized;
+
+                    if (Vector3.Dot(PlayerToEnemy, transform.forward) > 0) //Si el producto entre esa direccion y el forward del jugador es positivo, eso significa que el jugador está en frente del enemigo.
+                    {
+                        //Los enemigos en frente del jugador tienen preferencia para ser fijados. De manera que no hay penalizacion.
+                        if (Vector3.Distance(this.transform.position, enemy.transform.position) < distanceToEnemy) //Si la distancia al enemigo es la más cercana que se ha visto hasta ahora,
+                        {
+                            lockedEnemy = enemy; //Fija a ese enemigo.
+                            distanceToEnemy = Vector3.Distance(this.transform.position, enemy.transform.position); //Y guarda esa distancia como la más corta.
+                        }
+                    }
+                    else //Si por el contrario el enemigo está detrás del jugador
+                    {
+                        //Se aplica una penalización en la comparacion de la distancia, para favorecer que los enemigos en frente del jugador sean fijados más facilmente.
+                        if ((Vector3.Distance(this.transform.position, enemy.transform.position) * 2) + 5 < (distanceToEnemy)) //Si incluso con la penalizacion es el candidato favorito,
+                        {
+                            lockedEnemy = enemy; //Fija a ese enemigo.
+                            distanceToEnemy = Vector3.Distance(this.transform.position, enemy.transform.position); //Y guarda esa distancia como la más corta.
+                        }
+                    }
+
+                }
+            }
+            //Tras comparar todos los enemigos que hay en la lista y encontrar el más adecuado para ser fijado, el sistema de fijado coloca el objetivo sobre éste.
+            if (lockedEnemy != null)
+            {
+                crosshair.SetActive(true);
+                crosshair.transform.position = Camera.main.WorldToScreenPoint(lockedEnemy.transform.position); //Ponemos la mirilla en el punto relativo de la pantalal donde está el enemigo.
+                crosshair.transform.Rotate(new Vector3(0, 0, -1)); //Rotamos la mirilla para que mire hacia la camara.
+            }
+            else
+            {
+                crosshair.SetActive(false);
+            }
+
+
+        }
+        else //Por otro lado, si el jugador tiene un enemigo fijado...
+        {
+            //Basta con poner la mirilla de fijado sobre ese enemigo. No es necesario buscar mejores candidatos.
+            if (lockedEnemy != null)
+            {
+                crosshair.SetActive(false); //Desactivamos la mirilla normal.
+
+                lockedCrosshair.SetActive(true); //Y activamos la mirilla de fijado.
+
+                lockedCrosshair.transform.position = Camera.main.WorldToScreenPoint(lockedEnemy.transform.position); //Ponemos la mirilla en el punto relativo de la pantalal donde está el enemigo.
+                lockedCrosshair.transform.Rotate(new Vector3(0, 0, -1)); //Rotamos la mirilla para que mire hacia la camara.
+            }
+            else
+            {
+                crosshair.SetActive(false);
+                lockedCrosshair.SetActive(false);
+            }
+        }
     }
 
     /// <summary>
@@ -137,6 +343,13 @@ public class CombatController : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Gestiona todas las consecuencias de que el jugador reciba daño: actualizar el HP, el animator, etc.
+    /// </summary>
+    /// <param name="damage">Daño recibido</param>
+    /// <param name="knockbackForce">Knockback recibido</param>
+    /// <param name="knockbackDir">Direccion en la que se aplicará el knockback</param>
+    /// <param name="other">El objeto que ha causado el daño</param>
     public void takeDamage(int damage, float knockbackForce, Vector3 knockbackDir, GameObject other)
     {
         //Check if blocking & vulnerability
@@ -161,7 +374,7 @@ public class CombatController : MonoBehaviour
 
             //Play Hurt animation. The animator state machine bheaviour takes care of making the player invulnerable && unmovile during the hurt time window
             animator.SetTrigger("isHurt");
-        } 
+        }
         else if (isBlocking)
         {
             //Look at enemy
@@ -171,7 +384,7 @@ public class CombatController : MonoBehaviour
 
             //Aplica un tercio del knockback original del ataque.
             if (knockbackForce != 0)
-                forceApplier.AddImpact(new Vector3(knockbackDir.x, 0, knockbackDir.z), knockbackForce/3);
+                forceApplier.AddImpact(new Vector3(knockbackDir.x, 0, knockbackDir.z), knockbackForce / 3);
 
             //Play Block VFX
         }

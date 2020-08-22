@@ -9,17 +9,21 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] Animator animator;
     [SerializeField] int maxHealth = 100; //Salud total del enemigo
+    private int currentHealth; //Salud actual del enemigo
+    private EnemyHealthBar healthBar;
     public Transform[] patrolSpots;
     [HideInInspector] public int nextSpot;
     public bool isPatrolling;
     public float lookRadius = 10f;
+    [Tooltip("Si la distancia que separa al enemigo y al jugador es mayor que esta, el enemigo dejará de perseguirlo")] public float maxChaseDistance = 30f;
 
+    public bool onScreen;
+    public bool addedToList;
 
     [HideInInspector] public int damage;
     [HideInInspector] public float knockback;
 
     [HideInInspector] public GameObject target;
-    private int currentHealth; //Salud actual del enemigo
     [HideInInspector] public bool isVulnerable; //Booleano que determina si el enemigo puede recibir daño en su estado actual.
     private CharacterController controller;
     [HideInInspector] public NavMeshAgent agent;
@@ -39,6 +43,9 @@ public class Enemy : MonoBehaviour
         forceApplier = GetComponent<ForceApplier>();
         canAttack = true;
         canDamage = true;
+        healthBar = FindObjectOfType<EnemyHealthBar>();
+
+        addedToList = false;
 
         if (isPatrolling)
         {
@@ -53,6 +60,7 @@ public class Enemy : MonoBehaviour
         {
             currentHealth -= damage;
             //Actualizar el HUD que represente la vida de este enemigo
+            //healthBar.setHealth(currentHealth);
 
             //Play hurt animation
             animator.SetTrigger("Hurt");
@@ -72,13 +80,48 @@ public class Enemy : MonoBehaviour
 
     }
 
+    public void visualizeHealth()
+    {
+        healthBar.setMaxHealth(maxHealth);
+        healthBar.setHealth(currentHealth);
+    }
+
+    private void Update()
+    {
+        //GESTIONAR SI EL ENEMIGO ESTÁ EN PANTALLA, Y SI LO ESTÁ, AÑADIRLO A LA LISTA DE ENEMIGOS EN EL COMBAT MANAGER
+
+        //Determinamos la posición relativa del enemigo en el plano de la cámara.
+        Vector3 enemyPosition = Camera.main.WorldToViewportPoint(transform.position);
+
+        //Si los valores X e Y del vector anterior están entre 0 y 1, el enemigo se encuentra dentro de la pantalla.
+        onScreen = enemyPosition.z > 0 && enemyPosition.x > 0 && enemyPosition.x < 1 && enemyPosition.y > 0 && enemyPosition.y < 1;
+
+        //Finalmente, si el enemigo está dentro de la pantalla, lo añadimos a la lista de enemigos en el manager (una sola vez)
+        if(onScreen && !addedToList)
+        {
+            addedToList = true;
+            CombatManager.CM.enemies.Add(this);
+        } 
+        else if(!onScreen) //Pero si sale de la pantalla, no nos interesa mantenerlo en la lista, de manera que lo quitamos.
+        {
+            addedToList = false;
+            CombatManager.CM.enemies.Remove(this);
+        }
+
+    }
+
+
     private void Die()
     {
         //Play death animation
         animator.SetTrigger("Death");
 
+        CombatManager.CM.enemies.Remove(this);
+
         controller.enabled = false; //OJO, hay que modularizar esto para que funcione con cualquier tipo de collider automaticamente.
         this.enabled = false;
+
+        Destroy(gameObject, 10f);
     }
 
     private void OnTriggerEnter(Collider other)

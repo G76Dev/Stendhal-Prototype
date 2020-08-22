@@ -53,7 +53,6 @@ public class CYAN_Patrolling_Behaviour : StateMachineBehaviour
                 if (waitedTime >= waitTime)
                 {
                     Vector3 randomSpot = (Random.insideUnitSphere * wanderingOffset) + enemy.transform.position;
-                    Debug.Log(randomSpot);
                     enemy.agent.SetDestination(randomSpot);
                     waitedTime = 0;
                 }

@@ -25,6 +25,13 @@ public class CYAN_Chasing_Behaviour : StateMachineBehaviour
     {
         float distance = Vector3.Distance(enemy.transform.position, target.transform.position);
 
+        if (distance > enemy.maxChaseDistance) //Si el enemigo está demasiado lejos del jugador...
+        {
+            animator.SetBool("isChasing", false); //Deja de perseguirlo y vuelve a patrullar, o deambular.
+            CombatManager.CM.enemies.Remove(enemy); //Quita al enemigo de la lista del CM.
+            enemy.addedToList = false; //Y pone este booleano a false para que pueda volver a añadirse si el jugador se vuelve a encontrar con el enemigo.
+        }
+
         NavMeshHit hit;
 
         //Lanza un rayo hacia el objetivo. Si el resultado es false eso significa que no hay ningún obstaculo entre el enemigo y su objetivo.

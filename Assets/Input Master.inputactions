@@ -76,6 +76,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "LockOn",
+                    "type": "Button",
+                    "id": "1c695add-9e65-4075-ae01-a9441d9125e0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "ChangeLockOn",
+                    "type": "PassThrough",
+                    "id": "7d701f5a-344a-402f-931f-e68ce48dc8ff",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -356,17 +372,6 @@
                 },
                 {
                     "name": "",
-                    "id": "caa0765b-b918-4f98-9345-255f7c742c81",
-                    "path": "<Gamepad>/leftTrigger",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Controller",
-                    "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "7badecb2-0f55-46c5-b6df-4f8d3c356396",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
@@ -395,6 +400,61 @@
                     "processors": "",
                     "groups": "Controller",
                     "action": "Block",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6e13cc43-1184-4785-8210-9f8d1705986b",
+                    "path": "<Mouse>/middleButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard + mouse",
+                    "action": "LockOn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "72804386-6a25-45ba-b6d3-378ec2c3238b",
+                    "path": "<Keyboard>/g",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard + mouse",
+                    "action": "LockOn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f0dbc98f-9392-43f6-b2c9-7627839cc0f0",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "LockOn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "524352a9-e1ee-4e6b-b445-67e37bbc37db",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard + mouse",
+                    "action": "ChangeLockOn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8c55f0b5-5871-4692-b544-01a0c66f640b",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "ChangeLockOn",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
