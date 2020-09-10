@@ -29,6 +29,7 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public NavMeshAgent agent;
     [HideInInspector] public ForceApplier forceApplier;
     [HideInInspector] public bool canAttack;
+    [HideInInspector] public bool isAlive;
     private bool canDamage;
     [SerializeField] float attackCooldownTime;
 
@@ -43,6 +44,7 @@ public class Enemy : MonoBehaviour
         forceApplier = GetComponent<ForceApplier>();
         canAttack = true;
         canDamage = true;
+        isAlive = true;
         healthBar = FindObjectOfType<EnemyHealthBar>();
 
         addedToList = false;
@@ -59,8 +61,6 @@ public class Enemy : MonoBehaviour
         if (isVulnerable) //Si el enemigo es vulnerable,
         {
             currentHealth -= damage;
-            //Actualizar el HUD que represente la vida de este enemigo
-            //healthBar.setHealth(currentHealth);
 
             //Play hurt animation
             animator.SetTrigger("Hurt");
@@ -115,6 +115,8 @@ public class Enemy : MonoBehaviour
     {
         //Play death animation
         animator.SetTrigger("Death");
+
+        isAlive = false;
 
         CombatManager.CM.enemies.Remove(this);
 

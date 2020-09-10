@@ -5125,8 +5125,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2571427375249778916}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 69.395, y: -7.5366, z: -17.188}
-  m_LocalScale: {x: 0.44489, y: 0.44489, z: 0.44489}
+  m_LocalPosition: {x: 69.395, y: -7.5366, z: -17.186}
+  m_LocalScale: {x: 0.44, y: 0.44, z: 0.44}
   m_Children:
   - {fileID: 2571427374303682524}
   m_Father: {fileID: 0}
@@ -5147,6 +5147,10 @@ MonoBehaviour:
   moveSpeed: 12
   damage: 30
   knockback: 25
+  isHoming: 0
+  isPlayerFriendly: 0
+  destroyTime: 4
+  target: {fileID: 0}
 --- !u!65 &2571427375249778919
 BoxCollider:
   m_ObjectHideFlags: 0
