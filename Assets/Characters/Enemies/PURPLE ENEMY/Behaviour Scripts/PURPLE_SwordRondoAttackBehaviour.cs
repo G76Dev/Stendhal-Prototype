@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RED_Attacking_Behaviour : StateMachineBehaviour
+public class PURPLE_SwordRondoAttackBehaviour : StateMachineBehaviour
 {
     private MELEE_enemy enemy;
     private ForceApplier forceApplier;
@@ -10,7 +10,6 @@ public class RED_Attacking_Behaviour : StateMachineBehaviour
 
     [SerializeField] float attackImpulse;
     [SerializeField] int attackDamage;
-    [SerializeField] float attackKnockback;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -28,20 +27,25 @@ public class RED_Attacking_Behaviour : StateMachineBehaviour
         enemy.attackCollider.enabled = true;
         //Y finalmente reemplazamos el daño 'default' por el daño de este ataque en concreto.
         enemy.damage = attackDamage;
-        enemy.knockback = attackKnockback;
+
 
         //-ATTACK ACTION-
         //Una vez se han establecido las condiciones para el ataque, se impulsa al enemigo en dirección a su objetivo, con una fuerza igual a 'attackImpulse'
-        Vector3 attackDir = (target.transform.position - enemy.transform.position).normalized;
         forceApplier.AddImpact(new Vector3(enemy.transform.forward.x, 0, enemy.transform.forward.z), attackImpulse);
+
+        if (enemy.weapon != null)
+        {
+            enemy.weapon.GetComponentInChildren<EnemyMeleeWeapon>().damage = attackDamage;
+            enemy.weapon.transform.LookAt(target.transform.position);
+            enemy.weapon.GetComponentInChildren<Animator>().SetTrigger("SwordRondo"); //ESTO ESTA FEO Y HAY QUE HACERLO MAS BONITO
+        }
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-
-
-    //}
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+    }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -50,7 +54,5 @@ public class RED_Attacking_Behaviour : StateMachineBehaviour
         animator.SetBool("isAttacking", false);
         Physics.IgnoreCollision(target.GetComponent<CharacterController>(), enemy.GetComponent<CharacterController>(), false);
         enemy.attackCollider.enabled = false;
-        enemy.isVulnerable = true;
-        enemy.StartCoroutine(enemy.cooldownAttack());
     }
 }

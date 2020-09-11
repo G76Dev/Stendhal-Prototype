@@ -187,6 +187,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4386169451322438995}
   maxHealth: 100
+  willpower: 0
+  maxWillPower: 100
+  willpowerRegenRate: 10
   patrolSpots: []
   nextSpot: 0
   isPatrolling: 0
@@ -202,9 +205,11 @@ MonoBehaviour:
   forceApplier: {fileID: 0}
   canAttack: 0
   isAlive: 0
-  attackCooldownTime: 0
+  damageCooldownTime: 0.1
+  attackCooldownTime: 3
   projectile: {fileID: 2571427375249778916, guid: 2ff125b4aeb1b8e44917b0dc9f137427,
     type: 3}
+  animaKillerCost: 75
 --- !u!114 &4878881607224943198
 MonoBehaviour:
   m_ObjectHideFlags: 0

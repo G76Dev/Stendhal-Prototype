@@ -7,7 +7,11 @@ using UnityEngine.InputSystem;
 
 public class RANGED_enemy : Enemy
 {
+
     public GameObject projectile;
+
+    [Header("Willpower Attacks", order = 0)]
+    public int animaKillerCost;
 
     private void OnDrawGizmosSelected()
     {

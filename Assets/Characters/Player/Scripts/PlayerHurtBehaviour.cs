@@ -14,7 +14,8 @@ public class PlayerHurtBehaviour : StateMachineBehaviour
         movementController = animator.GetComponentInParent<MovementController>();
 
         //Hacemos al jugador invulnerable durante el tiempo que dure la animación de 'recibir daño' y bloqueamos su capacidad de movimiento y ataque.
-        combatController.isVulnerable = false;
+        //combatController.isVulnerable = false;
+        //^Linea comentada porque entraba en conflicto con algunos ataques enemigos (por ejemplo, el Anima Killer, que solo podía hacer daño una vez al ser 4 proyectiles juntos)
         combatController.canAttack = false;
         movementController.canDash = false;
         movementController.canMove = false;
@@ -30,7 +31,7 @@ public class PlayerHurtBehaviour : StateMachineBehaviour
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         //Una vez termina la ventana de invulnerabilidad al recibir daño, se le devuelve al jugador la vulnerabilidad y la capacidad de accion
-        combatController.isVulnerable = true;
+        //combatController.isVulnerable = true;
         combatController.canAttack = true;
         movementController.canDash = true;
         movementController.canMove = true;

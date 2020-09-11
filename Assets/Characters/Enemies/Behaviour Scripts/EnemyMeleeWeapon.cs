@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyMeleeWeapon : MonoBehaviour
 {
-    [SerializeField] int damage;
-    [SerializeField] float knockback;
+    [HideInInspector] public int damage;
+    [HideInInspector] public float knockback = 30;
 
     // Start is called before the first frame update
     void Start()

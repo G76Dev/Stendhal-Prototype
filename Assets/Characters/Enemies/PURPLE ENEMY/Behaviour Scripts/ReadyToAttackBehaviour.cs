@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class ReadyToAttackBehaviour : StateMachineBehaviour
 {
-    private Enemy enemy;
+    private MELEE_enemy enemy;
     private GameObject target;
+    private bool doesSwordRondo;
 
     private float waitedTime;
     [SerializeField] float attackWaitTime;
+    [SerializeField] float specialAttackWaitTime;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        enemy = animator.gameObject.GetComponentInParent<Enemy>();
+        enemy = animator.gameObject.GetComponentInParent<MELEE_enemy>();
         target = enemy.target;
 
         waitedTime = 0;
@@ -22,6 +24,26 @@ public class ReadyToAttackBehaviour : StateMachineBehaviour
 
         enemy.agent.isStopped = true;
         enemy.agent.velocity = Vector3.zero;
+
+        //DECISIÓN DE ATAQUE
+        //Una vez preparadas las condiciones para atacar, el enemigo decidirá cómo atacar (ataque simple o ataque WP) en base a su condición actual:
+
+        if (enemy.willpower > enemy.swordRondoCost) //Si el enemigo tiene la posibilidad de ejecutar el ataque WP, lo
+        {
+            //Lo ejecutará
+            doesSwordRondo = true;
+
+            //Y el aviso para hacerlo durará más tiempo que con un ataque normal:
+            attackWaitTime = specialAttackWaitTime;
+
+            //ToDo: anuncia ataque con un bark/popup visual
+        }
+        else //En caso de que no sea posible para él ejecutarlo,
+        {
+            //Ataca de forma básica,
+            doesSwordRondo = false;
+        }
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -29,7 +51,17 @@ public class ReadyToAttackBehaviour : StateMachineBehaviour
     {
         if (waitedTime >= attackWaitTime)
         {
-            animator.SetBool("isAttacking", true);
+            if (doesSwordRondo) //Si decidio ejecutar el ataque WP,
+            {
+                animator.SetTrigger("SwordRondo"); //lo ejecuta
+
+                enemy.willpower -= enemy.swordRondoCost; //y se actualiza su WP
+            }
+            else
+            {
+                //En cualquier otro caso, ejecuta el ataque normal.
+                animator.SetBool("isAttacking", true);
+            }
             waitedTime = 0;
         }
         else

@@ -33,6 +33,7 @@ public class CombatController : MonoBehaviour
     private int health;
     private HealthBarController healthBar;
     private EnemyHealthBar enemyHPBar;
+    private EnemyWillPowerBar enemyWPBar;
     [Tooltip("Impulso añadido al jugador cuando éste ataca")] [SerializeField] float attackImpulse = 1f;
     [HideInInspector] public bool canAttack;
     [HideInInspector] public bool isVulnerable;
@@ -84,6 +85,7 @@ public class CombatController : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         healthBar = FindObjectOfType<HealthBarController>();
         enemyHPBar = FindObjectOfType<EnemyHealthBar>();
+        enemyWPBar = FindObjectOfType<EnemyWillPowerBar>();
         concentrationBar = FindObjectOfType<ConcentrationBarController>();
         concentrationBar.setMaxConcentation(maxConcentration);
         willpowerBar = FindObjectOfType<WillpowerBar>();
@@ -471,22 +473,26 @@ public class CombatController : MonoBehaviour
 
         if (CombatManager.CM.onCombat) //Solo serán necesarias estas operaciones en caso de que estemos en un combate.
         {
-                LockOnSystem();
+            LockOnSystem();
 
-                if (lockedEnemy != null)
-                {
-                    enemyHPBar.gameObject.SetActive(true);
-                    lockedEnemy.visualizeHealth();
-                }
-                else
-                {
-                    enemyHPBar.gameObject.SetActive(false);
-                }
+            if (lockedEnemy != null)
+            {
+                enemyHPBar.gameObject.SetActive(true);
+                enemyWPBar.gameObject.SetActive(true);
+                lockedEnemy.visualizeHealth();
+                lockedEnemy.visualizeWillpower();
+            }
+            else
+            {
+                enemyHPBar.gameObject.SetActive(false);
+                enemyWPBar.gameObject.SetActive(false);
+            }
 
         }
         else
         {
             enemyHPBar.gameObject.SetActive(false);
+            enemyWPBar.gameObject.SetActive(false);
             crosshair.SetActive(false);
             lockedCrosshair.SetActive(false);
         }

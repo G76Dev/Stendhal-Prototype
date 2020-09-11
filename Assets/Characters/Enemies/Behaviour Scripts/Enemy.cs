@@ -11,14 +11,20 @@ public class Enemy : MonoBehaviour
     [SerializeField] int maxHealth = 100; //Salud total del enemigo
     private int currentHealth; //Salud actual del enemigo
     private EnemyHealthBar healthBar;
+
+    [HideInInspector] public float willpower;
+    [SerializeField] int maxWillPower = 100;
+    [SerializeField] float willpowerRegenRate = 0.25f;
+    private EnemyWillPowerBar WPBar;
+
     public Transform[] patrolSpots;
     [HideInInspector] public int nextSpot;
     public bool isPatrolling;
     public float lookRadius = 10f;
     [Tooltip("Si la distancia que separa al enemigo y al jugador es mayor que esta, el enemigo dejará de perseguirlo")] public float maxChaseDistance = 30f;
 
-    public bool onScreen;
-    public bool addedToList;
+    [HideInInspector] public bool onScreen;
+    [HideInInspector] public bool addedToList;
 
     [HideInInspector] public int damage;
     [HideInInspector] public float knockback;
@@ -31,6 +37,8 @@ public class Enemy : MonoBehaviour
     [HideInInspector] public bool canAttack;
     [HideInInspector] public bool isAlive;
     private bool canDamage;
+    [Tooltip("Tiempo en segundos que pasa desde que el enemigo causa daño, hasta que puede volver a causar daño. Se utiliza para evitar multiples golpes indeseados.")]
+    [SerializeField] float damageCooldownTime = 0.1f;
     [SerializeField] float attackCooldownTime;
 
     // Start is called before the first frame update
@@ -46,6 +54,9 @@ public class Enemy : MonoBehaviour
         canDamage = true;
         isAlive = true;
         healthBar = FindObjectOfType<EnemyHealthBar>();
+        WPBar = FindObjectOfType<EnemyWillPowerBar>();
+
+        willpower = 0;
 
         addedToList = false;
 
@@ -86,6 +97,12 @@ public class Enemy : MonoBehaviour
         healthBar.setHealth(currentHealth);
     }
 
+    public void visualizeWillpower()
+    {
+        WPBar.setMaxWillpower(maxWillPower);
+        WPBar.setWillpower(willpower);
+    }
+
     private void Update()
     {
         //GESTIONAR SI EL ENEMIGO ESTÁ EN PANTALLA, Y SI LO ESTÁ, AÑADIRLO A LA LISTA DE ENEMIGOS EN EL COMBAT MANAGER
@@ -106,6 +123,12 @@ public class Enemy : MonoBehaviour
         {
             addedToList = false;
             CombatManager.CM.enemies.Remove(this);
+        }
+
+        if (onScreen && addedToList)
+        {
+            willpower += Time.unscaledDeltaTime * willpowerRegenRate;
+            willpower = Mathf.Clamp(willpower, 0f, maxWillPower);
         }
 
     }
@@ -131,7 +154,7 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.tag == "Player" && canDamage)
         {
             other.GetComponent<CombatController>().takeDamage(damage, knockback, this.transform.forward, this.gameObject);
-            canDamage = false; //Ponemos el booleano a false para evitar más de una colisión indeseada
+            StartCoroutine(cooldownDamage());
         }
     }
 
@@ -140,6 +163,12 @@ public class Enemy : MonoBehaviour
         canAttack = false;
         yield return new WaitForSeconds(attackCooldownTime);
         canAttack = true;
+    }
+
+    public IEnumerator cooldownDamage()
+    {
+        canDamage = false;
+        yield return new WaitForSeconds(damageCooldownTime);
         canDamage = true;
     }
 

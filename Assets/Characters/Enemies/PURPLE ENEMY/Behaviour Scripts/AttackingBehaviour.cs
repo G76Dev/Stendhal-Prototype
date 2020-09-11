@@ -7,10 +7,8 @@ public class AttackingBehaviour : StateMachineBehaviour
     private MELEE_enemy enemy;
     private ForceApplier forceApplier;
     private GameObject target;
-    private float yValue;
 
     [SerializeField] float attackImpulse;
-    [SerializeField] float attackSpeed;
     [SerializeField] int attackDamage;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -22,6 +20,7 @@ public class AttackingBehaviour : StateMachineBehaviour
         forceApplier = animator.gameObject.GetComponentInParent<ForceApplier>();
 
         //-ATTACK SETUP-
+        enemy.transform.LookAt(target.transform.position);
         //Ignora la colisión entre el enemigo y el objetivo del ataque para que no obstaculice la embestida
         Physics.IgnoreCollision(target.GetComponent<CharacterController>(), enemy.GetComponent<CharacterController>(), true);
         //Acto seguido, activa el trigger que es el que se encargará de gestionar si el ataque ha golpeado, su daño, knockback, etc.
@@ -32,11 +31,11 @@ public class AttackingBehaviour : StateMachineBehaviour
 
         //-ATTACK ACTION-
         //Una vez se han establecido las condiciones para el ataque, se impulsa al enemigo en dirección a su objetivo, con una fuerza igual a 'attackImpulse'
-        Vector3 attackDir = (target.transform.position - enemy.transform.position).normalized;
         forceApplier.AddImpact(new Vector3(enemy.transform.forward.x, 0, enemy.transform.forward.z), attackImpulse);
 
         if(enemy.weapon != null)
         {
+            enemy.weapon.GetComponentInChildren<EnemyMeleeWeapon>().damage = attackDamage;
             enemy.weapon.transform.LookAt(target.transform.position);
             enemy.weapon.GetComponentInChildren<Animator>().SetTrigger("Attack"); //ESTO ESTA FEO Y HAY QUE HACERLO MAS BONITO
         }
