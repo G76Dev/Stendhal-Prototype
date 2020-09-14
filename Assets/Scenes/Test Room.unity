@@ -1956,7 +1956,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176181713}
-  m_LocalRotation: {x: 0.118601985, y: -0.6970893, z: 0.118601955, w: 0.69708943}
+  m_LocalRotation: {x: 0.11860198, y: -0.6970893, z: 0.11860196, w: 0.69708943}
   m_LocalPosition: {x: 45.654984, y: 12.979145, z: 0.93999815}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2385,6 +2385,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RED ENEMY
+      objectReference: {fileID: 0}
+    - target: {fileID: 5187650996119052122, guid: b1c5e431b9c31a7489b70f37dc620190,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5187650996119052123, guid: b1c5e431b9c31a7489b70f37dc620190,
         type: 3}
@@ -21181,7 +21186,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1655354744}
-  m_LocalRotation: {x: 0.117928036, y: -0.69720364, z: 0.11198429, w: 0.69818306}
+  m_LocalRotation: {x: 0.11792803, y: -0.6972037, z: 0.1119843, w: 0.698183}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -60381,6 +60386,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PURPLE ENEMY
       objectReference: {fileID: 0}
+    - target: {fileID: 6984217531511365703, guid: e27d279a297b102469de42d4b4133373,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e27d279a297b102469de42d4b4133373, type: 3}
 --- !u!33 &1303700499037854037
@@ -60892,10 +60902,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3675904132913350366, guid: b9e117faa0cf58c4c863edf6878434ce,
+        type: 3}
+      propertyPath: willpowerRegenRate
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4386169452235946556, guid: b9e117faa0cf58c4c863edf6878434ce,
         type: 3}
       propertyPath: m_Name
       value: CYAN ENEMY
+      objectReference: {fileID: 0}
+    - target: {fileID: 4386169452235946556, guid: b9e117faa0cf58c4c863edf6878434ce,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4386169452235946557, guid: b9e117faa0cf58c4c863edf6878434ce,
         type: 3}

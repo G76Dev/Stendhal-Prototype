@@ -1,22 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RED_ReadyToAttack_Behaviour : StateMachineBehaviour
 {
     private MELEE_enemy enemy;
     private GameObject target;
     private bool doesTripleCharge;
+    private GameObject bark;
 
     private float waitedTime;
     [SerializeField] float attackWaitTime;
     [SerializeField] float specialAttackWaitTime;
+    [SerializeField] GameObject barkAttackPrefab;
+    [SerializeField] string specialAttackName;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         enemy = animator.gameObject.GetComponentInParent<MELEE_enemy>();
         target = enemy.target;
+
+
 
         waitedTime = 0;
 
@@ -39,7 +45,14 @@ public class RED_ReadyToAttack_Behaviour : StateMachineBehaviour
             //Y el aviso para hacerlo durará más tiempo que con un ataque normal:
             attackWaitTime = specialAttackWaitTime;
 
-            //ToDo: anuncia ataque con un bark/popup visual
+            //Anuncia ataque con un bark/popup visual !!!1
+            var canvas = FindObjectOfType<Canvas>();
+            Vector3 viewportPosition = Camera.main.WorldToScreenPoint(new Vector3(enemy.transform.position.x, enemy.transform.position.y + 2, enemy.transform.position.z));
+
+            bark = Instantiate(barkAttackPrefab, viewportPosition, Quaternion.identity);
+            bark.GetComponentInChildren<Text>().text = specialAttackName;
+            bark.transform.SetParent(canvas.transform, false);
+            bark.transform.position = new Vector3(viewportPosition.x, viewportPosition.y, viewportPosition.z);
         } 
         else //En caso de que no sea posible para él ejecutarlo,
         {
@@ -72,6 +85,8 @@ public class RED_ReadyToAttack_Behaviour : StateMachineBehaviour
         {
             waitedTime += Time.deltaTime;
         }
+        //Hacemos que el bark se mantenga en su sitio mientras tanto.
+        bark.transform.position = Camera.main.WorldToScreenPoint(new Vector3(enemy.transform.position.x, enemy.transform.position.y + 2, enemy.transform.position.z));
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
@@ -79,6 +94,7 @@ public class RED_ReadyToAttack_Behaviour : StateMachineBehaviour
     {
         animator.SetBool("isReadyToAttack", false);
         enemy.agent.isStopped = false;
+        Destroy(bark, 0.2f); //Al ejecutar el ataque, destruye el 'bark' que lo anunciaba porque ya no es necesario.
     }
 
 }
