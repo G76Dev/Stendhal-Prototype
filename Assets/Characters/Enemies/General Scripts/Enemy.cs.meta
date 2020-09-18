@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d07158d250a6629499242643e6414f49
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - stats: {instanceID: 0}
+  - animator: {instanceID: 0}
+  - target: {instanceID: 0}
+  - agent: {instanceID: 0}
+  - forceApplier: {instanceID: 0}
+  - statsWidgetPrefab: {fileID: 8071918518702842497, guid: 4c781f64801bfa34bb5c6652b7f7b433,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

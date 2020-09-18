@@ -232,22 +232,22 @@ public class CombatController : MonoBehaviour
     private void enterCombatMenu()
     {
         StartCoroutine(timeLerp(1, slowdownFactor, timeChangeSpeed));
-        //Time.timeScale = slowdownFactor;
         Fade(Color.black, 0.5f, 0.3f); //Oscurece la pantalla durante el slow mo
         onSlowMo = true;
 
         UIManager.UIM.activateCombatMenuHUD();
+        CombatManager.CM.showAllStats();
         playerInput.SwitchCurrentActionMap("Combat_Menu");
     }
 
     private void exitCombatMenu()
     {
         StartCoroutine(timeLerp(slowdownFactor, 1, timeChangeSpeed));
-        //Time.timeScale = 1.0f;
         Fade(Color.black, 0.5f, 0f); //Al acabar el slow motion, deshace el fade.
         onSlowMo = false;
 
         UIManager.UIM.activateCombatHUD();
+        CombatManager.CM.hideAllStats();
         playerInput.SwitchCurrentActionMap("Player");
     }
 
@@ -339,6 +339,7 @@ public class CombatController : MonoBehaviour
     public void OnCancelEnemySelection()
     {
         UIManager.UIM.activateCombatMenuHUD();
+        CombatManager.CM.showAllStats();
         playerInput.SwitchCurrentActionMap("Combat_Menu");
         lockedOn = false;
         attackToExecute = null;
@@ -358,6 +359,7 @@ public class CombatController : MonoBehaviour
     {
         playerInput.SwitchCurrentActionMap("Enemy_Selection");
         UIManager.UIM.hideAllCombatHUD();
+        CombatManager.CM.hideAllStats();
         lockedOn = true;
         attackToExecute = attack;
     }
@@ -447,6 +449,7 @@ public class CombatController : MonoBehaviour
     {
         print("NO TIENES VOLUNTAD SUFICIENTE PARA EJECUTAR ESTE ATAQUE!");
         UIManager.UIM.activateCombatMenuHUD();
+        CombatManager.CM.showAllStats();
         playerInput.SwitchCurrentActionMap("Combat_Menu");
     }
 

@@ -7,14 +7,14 @@ using UnityEngine.InputSystem;
 
 public class Enemy : MonoBehaviour
 {
+    public EnemyStats stats;
+
     [SerializeField] Animator animator;
-    [SerializeField] int maxHealth = 100; //Salud total del enemigo
-    private int currentHealth; //Salud actual del enemigo
+    public int currentHealth; //Salud actual del enemigo
     private EnemyHealthBar healthBar;
 
     [HideInInspector] public float willpower;
-    [SerializeField] int maxWillPower = 100;
-    [SerializeField] float willpowerRegenRate = 0.25f;
+    [SerializeField] float willpowerRegenRate;
     private EnemyWillPowerBar WPBar;
 
     public Transform[] patrolSpots;
@@ -41,10 +41,13 @@ public class Enemy : MonoBehaviour
     [SerializeField] float damageCooldownTime = 0.1f;
     [SerializeField] float attackCooldownTime;
 
+    [SerializeField] GameObject statsWidgetPrefab;
+    private GameObject statsWidget; //Gameobject que alamcenará el widget visual con la información de combate específica de este enemigo.
+
     // Start is called before the first frame update
     void Start()
     {
-        currentHealth = maxHealth;
+        currentHealth = stats.health;
         isVulnerable = true;
         agent = GetComponent<NavMeshAgent>();
         controller = GetComponent<CharacterController>();
@@ -65,6 +68,8 @@ public class Enemy : MonoBehaviour
             nextSpot = 0;
             agent.SetDestination(patrolSpots[0].position);
         }
+        initializeStatsWidget();
+        statsWidget.SetActive(false);
     }
 
     public void takeDamage(int damage, float knockbackForce, Vector3 knockbackDir, GameObject other)
@@ -93,13 +98,13 @@ public class Enemy : MonoBehaviour
 
     public void visualizeHealth()
     {
-        healthBar.setMaxHealth(maxHealth);
+        healthBar.setMaxHealth(stats.health);
         healthBar.setHealth(currentHealth);
     }
 
     public void visualizeWillpower()
     {
-        WPBar.setMaxWillpower(maxWillPower);
+        WPBar.setMaxWillpower(stats.willpower);
         WPBar.setWillpower(willpower);
     }
 
@@ -127,12 +132,44 @@ public class Enemy : MonoBehaviour
 
         if (onScreen && addedToList)
         {
-            willpower += Time.unscaledDeltaTime * willpowerRegenRate;
-            willpower = Mathf.Clamp(willpower, 0f, maxWillPower);
+            willpower += Time.deltaTime * willpowerRegenRate;
+            willpower = Mathf.Clamp(willpower, 0f, stats.willpower);
+
+            if(statsWidget.activeSelf == true) //Si las stats están siendo mostradas en pantalla,
+            {
+                //Actualiza la posición del widget para que siga al enemigo,
+                Vector3 viewportPosition = Camera.main.WorldToScreenPoint(new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z));
+                statsWidget.transform.position = new Vector3(viewportPosition.x, viewportPosition.y, -3);
+
+                //Y activa la información de HP y WP
+                statsWidget.GetComponent<StatsDisplayer>().updateWPandHP(currentHealth, willpower);
+            }
         }
 
     }
 
+    public void showStats()
+    {
+        if (statsWidget == null) //Solo es necesario realizar esta operación la primera vez.
+        {
+            initializeStatsWidget();
+        }
+        statsWidget.SetActive(true);
+    }
+
+    private void initializeStatsWidget()
+    {
+        var canvas = GameObject.FindGameObjectWithTag("InferiorCanvas");
+
+        statsWidget = Instantiate(statsWidgetPrefab);
+        statsWidget.GetComponent<StatsDisplayer>().stats = stats;
+        statsWidget.transform.SetParent(canvas.transform, false);
+    }
+
+    public void hideStats()
+    {
+        statsWidget.SetActive(false);
+    }
 
     private void Die()
     {
@@ -146,6 +183,7 @@ public class Enemy : MonoBehaviour
         controller.enabled = false; //OJO, hay que modularizar esto para que funcione con cualquier tipo de collider automaticamente.
         this.enabled = false;
 
+        Destroy(statsWidget); //Destruimos este objeto antes de destruir al enemigo, para que no quede basura.
         Destroy(gameObject, 10f);
     }
 

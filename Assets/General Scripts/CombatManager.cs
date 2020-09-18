@@ -26,6 +26,22 @@ public class CombatManager : MonoBehaviour
         DontDestroyOnLoad(this); //Ah, y no destruyas esto al cargar
     }
 
+    public void showAllStats()
+    {
+        foreach(Enemy enemy in enemies)
+        {
+            enemy.showStats();
+        }
+    }
+
+    public void hideAllStats()
+    {
+        foreach (Enemy enemy in enemies)
+        {
+            enemy.hideStats();
+        }
+    }
+
     private void Update()
     {
         onCombat = enemies.Count > 0; //Si hay al menos un enemigo en la lista, eso significa que estamos en un combate.

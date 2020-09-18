@@ -41,13 +41,13 @@ public class CYAN_ReadyToAttack_Behaviour : StateMachineBehaviour
             attackWaitTime = specialAttackWaitTime;
 
             //Anuncia ataque con un bark/popup visual !!!1
-            var canvas = FindObjectOfType<Canvas>();
+            var canvas = GameObject.FindGameObjectWithTag("InferiorCanvas");
             Vector3 viewportPosition = Camera.main.WorldToScreenPoint(new Vector3(enemy.transform.position.x, enemy.transform.position.y + 2, enemy.transform.position.z));
 
             bark = Instantiate(barkAttackPrefab, viewportPosition, Quaternion.identity);
             bark.GetComponentInChildren<Text>().text = specialAttackName;
             bark.transform.SetParent(canvas.transform, false);
-            bark.transform.position = new Vector3(viewportPosition.x, viewportPosition.y, viewportPosition.z);
+            bark.transform.position = viewportPosition;
         }
         else //En caso de que no sea posible para él ejecutarlo,
         {
@@ -82,7 +82,8 @@ public class CYAN_ReadyToAttack_Behaviour : StateMachineBehaviour
             waitedTime += Time.deltaTime;
         }
         //Hacemos que el bark se mantenga en su sitio mientras tanto.
-        bark.transform.position = Camera.main.WorldToScreenPoint(new Vector3(enemy.transform.position.x, enemy.transform.position.y + 2, enemy.transform.position.z));
+        if (bark != null)
+            bark.transform.position = Camera.main.WorldToScreenPoint(new Vector3(enemy.transform.position.x, enemy.transform.position.y + 2, enemy.transform.position.z));
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
