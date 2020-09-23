@@ -255,4 +255,34 @@ public class MovementController : MonoBehaviour
             controller.Move(velocity * Time.deltaTime); //Finalmente, tras todas las simulaciones necesarias, movemos al jugador en función de la velocidad calculada
 
     }
+
+
+    //CODIGO RELACIONADO CON EL FUNCIONAMIENTO DE LAS PLATAFORMAS MOVILES 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "movingPlatform")
+        {
+            this.transform.SetParent(other.gameObject.transform);
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "movingPlatform")
+        {
+            //ESTO ES HORRIBLE. LO SE. NO ME JUZGUES MAL POR ELLO.
+            this.transform.SetParent(null);
+            this.transform.localScale = new Vector3(1, 1, 1);
+            this.transform.SetParent(other.gameObject.transform);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "movingPlatform")
+        {
+            print("buenas");
+            this.transform.SetParent(null);
+        }
+    }
 }
