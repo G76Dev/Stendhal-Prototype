@@ -56,6 +56,9 @@ public class MovementController : MonoBehaviour
         canSnapCamera = true;
         canMove = true;
         canDash = true;
+
+        //cinemaCam.m_Orbits[1].m_Height = 3;
+        //cinemaCam.m_Orbits[1].m_Radius = 120;
     }
 
     #region INPUT MANAGEMENT
