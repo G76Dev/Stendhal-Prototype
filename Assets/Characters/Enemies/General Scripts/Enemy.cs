@@ -56,8 +56,7 @@ public class Enemy : MonoBehaviour
         canAttack = true;
         canDamage = true;
         isAlive = true;
-        healthBar = FindObjectOfType<EnemyHealthBar>();
-        WPBar = FindObjectOfType<EnemyWillPowerBar>();
+
 
         willpower = 0;
 
@@ -70,6 +69,12 @@ public class Enemy : MonoBehaviour
         }
         initializeStatsWidget();
         statsWidget.SetActive(false);
+    }
+
+    private void OnEnable()
+    {
+        healthBar = GameObject.Find("Enemy Health Bar").GetComponent<EnemyHealthBar>();
+        WPBar = FindObjectOfType<EnemyWillPowerBar>();
     }
 
     public void takeDamage(int damage, float knockbackForce, Vector3 knockbackDir, GameObject other)
@@ -99,6 +104,7 @@ public class Enemy : MonoBehaviour
     public void visualizeHealth()
     {
         healthBar.setMaxHealth(stats.health);
+        healthBar.showName(stats.name);
         healthBar.setHealth(currentHealth);
     }
 
@@ -184,7 +190,7 @@ public class Enemy : MonoBehaviour
         this.enabled = false;
 
         Destroy(statsWidget); //Destruimos este objeto antes de destruir al enemigo, para que no quede basura.
-        Destroy(gameObject, 10f);
+        Destroy(gameObject, 3f);
     }
 
     private void OnTriggerEnter(Collider other)

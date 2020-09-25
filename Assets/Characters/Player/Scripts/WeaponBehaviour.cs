@@ -43,6 +43,9 @@ public class WeaponBehaviour : MonoBehaviour
                 //Si el raycast tiene exito, instancia las particulas en el punto de colisión
                 Instantiate(hitParticles, hit.point, Quaternion.identity);
             }
+
+            //Finalmente, añadimos willpower al jugador por haber golpeado al enemigo
+            GetComponentInParent<CombatController>().increaseWillpowerbyHit();
         }
     }
 

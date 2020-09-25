@@ -62,6 +62,9 @@ public class CombatController : MonoBehaviour
     [HideInInspector] public float willpower;
     [SerializeField] int maxWillPower = 300;
     [SerializeField] float willpowerRegenRate = 1f;
+    [SerializeField] int willpowerPerBlock = 10;
+    [SerializeField] int willpowerPerHit = 10;
+
 
     [Header("ATTACKS Variables", order = 3)] //TODO: Crear un Enum, o una clase Ataque, que reuna tanto el ataque, como su coste, como su ejecucion.
     [SerializeField] int bloodyThrustCost = 50;
@@ -90,7 +93,7 @@ public class CombatController : MonoBehaviour
         concentrationBar.setMaxConcentation(maxConcentration);
         willpowerBar = FindObjectOfType<WillpowerBar>();
         willpowerBar.setMaxWillpower(maxWillPower);
-        willpower = maxWillPower;
+        //willpower = maxWillPower;
 
         noOfTaps = 0;
         concentration = maxConcentration;
@@ -709,9 +712,26 @@ public class CombatController : MonoBehaviour
             if (knockbackForce != 0)
                 forceApplier.AddImpact(new Vector3(knockbackDir.x, 0, knockbackDir.z), knockbackForce / 3);
 
+            //Aumenta el willpower por haber hecho un bloqueo exitosamente.
+            willpower += willpowerPerBlock;
+            willpower = Mathf.Clamp(willpower, 0f, maxWillPower);
+
             //Play Block VFX
         }
 
+    }
+
+    public void increaseWillpowerbyHit()
+    {
+        //Aumenta el willpower por golpear al enemigo exitosamente.
+        willpower += willpowerPerHit;
+        willpower = Mathf.Clamp(willpower, 0f, maxWillPower);
+    }
+
+    public void increaseWillpower(int amount)
+    {
+        willpower += amount;
+        willpower = Mathf.Clamp(willpower, 0f, maxWillPower);
     }
 
     /// <summary>

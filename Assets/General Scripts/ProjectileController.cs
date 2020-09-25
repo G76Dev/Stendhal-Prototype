@@ -44,7 +44,7 @@ public class ProjectileController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("COLISION");
+        //print("COLISION");
         if (other.tag == "Player" && !isPlayerFriendly)
         {
             //print("El jugador recibe " + damage + " puntos de daño!");

@@ -9,11 +9,17 @@ public class EnemyHealthBar : MonoBehaviour
     private Slider slider;
     public Gradient gradient;
     public Image fill;
+    public Text name;
+    public Image background1;
+    public Image background2;
     [Tooltip("Velocidad a la que la barra se adapta a los nuevos valores que recibe")] [SerializeField] float changingSpeed = 5f;
 
     private void Awake()
     {
         slider = GetComponent<Slider>();
+        name.text = "";
+        background1.enabled = false;
+        background2.enabled = false;
     }
 
     public void setHealth(int health)
@@ -32,4 +38,15 @@ public class EnemyHealthBar : MonoBehaviour
 
         fill.color = gradient.Evaluate(1f);
     }
+
+    public void showName(string n)
+    {
+        name.text = n;
+        if(!background1.enabled)
+        {
+            background1.enabled = true;
+            background2.enabled = true;
+        }
+    }
+
 }
