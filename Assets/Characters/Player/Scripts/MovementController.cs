@@ -260,6 +260,19 @@ public class MovementController : MonoBehaviour
     }
 
 
+    public void disableMovement()
+    {
+        canMove = false;
+        canDash = false;
+    }
+
+    public void enableMovement()
+    {
+        canMove = true;
+        canDash = true;
+    }
+
+
     //CODIGO RELACIONADO CON EL FUNCIONAMIENTO DE LAS PLATAFORMAS MOVILES 
     private void OnTriggerEnter(Collider other)
     {

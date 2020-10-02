@@ -9,6 +9,8 @@ public class CombatManager : MonoBehaviour
 
     public List<Enemy> enemies;
 
+    public GameObject combatHUD;
+
     public bool onCombat;
 
 
@@ -45,6 +47,15 @@ public class CombatManager : MonoBehaviour
     private void Update()
     {
         onCombat = enemies.Count > 0; //Si hay al menos un enemigo en la lista, eso significa que estamos en un combate.
+
+        if(!onCombat)
+        {
+            combatHUD.SetActive(false);
+        } 
+        else
+        {
+            combatHUD.SetActive(true);
+        }
     }
 
 

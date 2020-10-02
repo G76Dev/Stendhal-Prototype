@@ -109,13 +109,27 @@ public class CombatController : MonoBehaviour
     private void OnEnable()
     {
         weaponBehaviour.comboCheckEvent += comboAttack;
+
+        canAttack = true;
+        
     }
 
     private void OnDisable()
     {
         weaponBehaviour.comboCheckEvent -= comboAttack;
+
+        canAttack = false;
     }
 
+    public void disableAttack()
+    {
+        canAttack = false;
+    }
+
+    public void enableAttack()
+    {
+        canAttack = true;
+    }
 
     #region INPUT MANAGEMENT
 
