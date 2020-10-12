@@ -1570,7 +1570,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: '[pic=4] Fuck yourself.'
+        value: '[pic=4]Fuck yourself.'
         type: 0
         typeString: 
       - title: Parenthetical

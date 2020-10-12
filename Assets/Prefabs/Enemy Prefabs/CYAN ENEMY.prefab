@@ -185,10 +185,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e224ab2564e28744b2c77273c070cd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats: {fileID: 0}
   animator: {fileID: 4386169451322438995}
-  maxHealth: 100
+  currentHealth: 0
   willpower: 0
-  maxWillPower: 100
   willpowerRegenRate: 10
   patrolSpots: []
   nextSpot: 0
@@ -207,6 +207,7 @@ MonoBehaviour:
   isAlive: 0
   damageCooldownTime: 0.1
   attackCooldownTime: 3
+  statsWidgetPrefab: {fileID: 0}
   projectile: {fileID: 2571427375249778916, guid: 2ff125b4aeb1b8e44917b0dc9f137427,
     type: 3}
   animaKillerCost: 75

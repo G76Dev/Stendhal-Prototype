@@ -67,6 +67,9 @@ public class MovementController : MonoBehaviour
     {
         var v = value.Get<Vector2>(); //El valor leído siempre debe corresponder con el asignado a la acción dentro del Action Map
 
+        if (v.magnitude < 0.1)
+            v = Vector2.zero;
+
         if(canMove) //Recoge el input sólo si el jugador puede moverse.
         {
             direction = new Vector3(v.x, 0f, v.y); //Normalmente este vector deberia normalizarse, pero los valores vienen ya normalizados del sistema de Input.
@@ -77,6 +80,8 @@ public class MovementController : MonoBehaviour
         }
         
     }
+
+
     public void OnJump()
     {
         if (isGrounded)

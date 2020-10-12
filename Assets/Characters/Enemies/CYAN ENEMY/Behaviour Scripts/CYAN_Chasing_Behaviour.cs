@@ -57,14 +57,18 @@ public class CYAN_Chasing_Behaviour : StateMachineBehaviour
         } 
         else //Si el raycast es true, significa que existe un obstaculo, por lo que el enemigo perseguirá al jugador hasta que ya no haya obstáculos.
         {
+            enemy.agent.isStopped = false;
             if (fallbackDistance < distance) //Si el objetivo no está demasiado cerca, el enemigo se aproxima a él.
             {
                 enemy.agent.SetDestination(enemy.target.transform.position);
             } 
             else //Si por el contrario el objetivo se ha acercado demasiado, el enemigo comienza a huir hasta haber puesto una distancia de seguridad entre él y su objetivo.
             {
-                enemy.transform.rotation = Quaternion.LookRotation(enemy.transform.position - target.transform.position);
-                enemy.agent.SetDestination(enemy.transform.position + enemy.transform.forward * 10);
+                
+                Vector3 dir = enemy.transform.position - target.transform.position;
+                enemy.transform.rotation = Quaternion.LookRotation(new Vector3(dir.x,0,dir.z));
+                Vector3 aux = enemy.transform.position + (enemy.transform.forward * 2);
+                enemy.agent.SetDestination(new Vector3(aux.x,enemy.transform.position.y,aux.z));
             }
         }
 

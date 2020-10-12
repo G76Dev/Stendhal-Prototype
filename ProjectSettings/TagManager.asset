@@ -9,6 +9,7 @@ TagManager:
   - PlayerFriendly
   - InferiorCanvas
   - movingPlatform
+  - PlayerStart
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Timeline;
 using UnityEngine.UI;
+using UnityEngine.Playables;
 
 
 [RequireComponent(typeof(MovementController))]
@@ -78,6 +79,8 @@ public class CombatController : MonoBehaviour
     private bool onSlowMo;
     private float timer;
     private string attackToExecute; //Almacena el nombre de un ataque mientras se selecciona su objetivo. Una vez se selecciona, se ejecuta el metodo con este nombre y se limpia esta variable.
+
+    [SerializeField] PlayableDirector defaultCamera;
 
 
     private void Start()
@@ -175,6 +178,19 @@ public class CombatController : MonoBehaviour
             }
         }
     }
+
+    public void OnRespawn()
+    {
+        GetComponent<CharacterController>().enabled = false;
+        this.transform.position = GameObject.FindGameObjectWithTag("PlayerStart").transform.position;
+        GetComponent<CharacterController>().enabled = true;
+
+        defaultCamera.Play();
+
+        health = maxHealth;
+        healthBar.setMaxHealth(maxHealth);
+    }
+
 
     public void OnBlock()
     {
@@ -454,6 +470,7 @@ public class CombatController : MonoBehaviour
         exitCombatMenu(); //Sale del slow motion para realizar la accion
 
         health = health + healedAmount;
+        health = Mathf.Clamp(health, 0, maxHealth);
         healthBar.setHealth(health);
 
         //Todo: play heal FX

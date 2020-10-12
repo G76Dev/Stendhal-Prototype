@@ -40,6 +40,7 @@ public class ProtoLevelManager : MonoBehaviour
     {
         for(int i = 0; i< doors.Length; i++)
         {
+            doors[i].GetComponent<Collider>().enabled = false;
             doors[i].GetComponent<Animator>().SetTrigger("Vanish");
         }
     }

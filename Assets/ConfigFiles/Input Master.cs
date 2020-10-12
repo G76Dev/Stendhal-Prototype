@@ -113,6 +113,14 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Respawn"",
+                    ""type"": ""Button"",
+                    ""id"": ""d756bb49-7c4d-41a3-b58d-67d582830dfc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -500,6 +508,28 @@ public class @InputMaster : IInputActionCollection, IDisposable
                     ""action"": ""Concentration"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""34f8d87f-254f-4d58-9b36-21b93ff34796"",
+                    ""path"": ""<Keyboard>/o"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard + mouse"",
+                    ""action"": ""Respawn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""54a2b026-eac7-4a79-b88e-23a34fbc75ed"",
+                    ""path"": ""<Gamepad>/select"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Controller"",
+                    ""action"": ""Respawn"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -736,6 +766,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         m_Player_LockOn = m_Player.FindAction("LockOn", throwIfNotFound: true);
         m_Player_ChangeLockOn = m_Player.FindAction("ChangeLockOn", throwIfNotFound: true);
         m_Player_Concentration = m_Player.FindAction("Concentration", throwIfNotFound: true);
+        m_Player_Respawn = m_Player.FindAction("Respawn", throwIfNotFound: true);
         // Combat_Menu
         m_Combat_Menu = asset.FindActionMap("Combat_Menu", throwIfNotFound: true);
         m_Combat_Menu_Concentration = m_Combat_Menu.FindAction("Concentration", throwIfNotFound: true);
@@ -806,6 +837,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_LockOn;
     private readonly InputAction m_Player_ChangeLockOn;
     private readonly InputAction m_Player_Concentration;
+    private readonly InputAction m_Player_Respawn;
     public struct PlayerActions
     {
         private @InputMaster m_Wrapper;
@@ -822,6 +854,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         public InputAction @LockOn => m_Wrapper.m_Player_LockOn;
         public InputAction @ChangeLockOn => m_Wrapper.m_Player_ChangeLockOn;
         public InputAction @Concentration => m_Wrapper.m_Player_Concentration;
+        public InputAction @Respawn => m_Wrapper.m_Player_Respawn;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -867,6 +900,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Concentration.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnConcentration;
                 @Concentration.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnConcentration;
                 @Concentration.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnConcentration;
+                @Respawn.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRespawn;
+                @Respawn.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRespawn;
+                @Respawn.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRespawn;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -907,6 +943,9 @@ public class @InputMaster : IInputActionCollection, IDisposable
                 @Concentration.started += instance.OnConcentration;
                 @Concentration.performed += instance.OnConcentration;
                 @Concentration.canceled += instance.OnConcentration;
+                @Respawn.started += instance.OnRespawn;
+                @Respawn.performed += instance.OnRespawn;
+                @Respawn.canceled += instance.OnRespawn;
             }
         }
     }
@@ -1033,6 +1072,7 @@ public class @InputMaster : IInputActionCollection, IDisposable
         void OnLockOn(InputAction.CallbackContext context);
         void OnChangeLockOn(InputAction.CallbackContext context);
         void OnConcentration(InputAction.CallbackContext context);
+        void OnRespawn(InputAction.CallbackContext context);
     }
     public interface ICombat_MenuActions
     {

@@ -388,6 +388,22 @@ BlendTree:
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+--- !u!114 &-7828798167300371571
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b720e795a2f2a4ca17d19f5a900fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackWaitTime: 0
+  specialAttackWaitTime: 0
+  barkAttackPrefab: {fileID: 0}
+  specialAttackName: 
 --- !u!206 &-7604352153946090795
 BlendTree:
   m_ObjectHideFlags: 3
@@ -504,20 +520,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!114 &-7144803449362080947
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb5a151bfdb6294ba542d442d4c1fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitTime: 3
-  wanderingOffset: 5
 --- !u!114 &-7064710124279063001
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -605,6 +607,20 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+--- !u!114 &-6728012761783234149
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb5a151bfdb6294ba542d442d4c1fb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 3
+  wanderingOffset: 8
 --- !u!206 &-6654940607570206751
 BlendTree:
   m_ObjectHideFlags: 3
@@ -786,6 +802,21 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+--- !u!114 &-5667886018740335646
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571bd5f01a5e769448424b1f59f714b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDistance: 0
+  fallbackDistance: 0
+  attackCooldown: 0
 --- !u!206 &-5635351250698423816
 BlendTree:
   m_ObjectHideFlags: 3
@@ -1021,6 +1052,20 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+--- !u!114 &-4898373071406687551
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e06f11062e49214e939d4b2a8fb8ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDistance: 3
+  attackCooldown: 1
 --- !u!206 &-4772094873406827937
 BlendTree:
   m_ObjectHideFlags: 3
@@ -1466,6 +1511,23 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+--- !u!114 &-4118013334250350235
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad693264f5dbaa145a6004c8a21bcafc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackWaitTime: 0.7
+  specialAttackWaitTime: 2
+  barkAttackPrefab: {fileID: 8071918518702842497, guid: d25607ad73a3e454ab6fd52534982915,
+    type: 3}
+  specialAttackName: TRIPLE CHARGE
 --- !u!1102 &-4019771735096872249
 AnimatorState:
   serializedVersion: 5
@@ -1674,7 +1736,7 @@ AnimatorState:
   - {fileID: 1490537274902453306}
   - {fileID: -2951142336502027536}
   m_StateMachineBehaviours:
-  - {fileID: 5247620850794626293}
+  - {fileID: -4118013334250350235}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -2040,7 +2102,7 @@ AnimatorState:
   - {fileID: 116640730374769750}
   - {fileID: 2936009961924990041}
   m_StateMachineBehaviours:
-  - {fileID: -1474746769800165097}
+  - {fileID: 8068533238605219542}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -2177,20 +2239,6 @@ BlendTree:
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 1
---- !u!114 &-2403615735351146726
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e06f11062e49214e939d4b2a8fb8ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDistance: 7
-  attackCooldown: 4
 --- !u!1101 &-2196603906574207527
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -2429,20 +2477,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!114 &-1474746769800165097
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb5a151bfdb6294ba542d442d4c1fb2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waitTime: 3
-  wanderingOffset: 5
 --- !u!114 &-1197627853828108811
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -2940,6 +2974,20 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+--- !u!114 &231498270045235035
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01c8c550cbd0624cb3dce8a16db0feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 0
+  wanderingOffset: 0
 --- !u!206 &439819097473422216
 BlendTree:
   m_ObjectHideFlags: 3
@@ -3477,6 +3525,21 @@ BlendTree:
   m_UseAutomaticThresholds: 0
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+--- !u!114 &2564343405315078216
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46a62ce1fae10e247892a9f7e3b7cda8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackImpulse: 80
+  attackDamage: 40
+  attackKnockback: 100
 --- !u!1101 &2686138956111086806
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -3593,6 +3656,20 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+--- !u!114 &2822385802303260944
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01c8c550cbd0624cb3dce8a16db0feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 0
+  wanderingOffset: 0
 --- !u!206 &2893712079594082134
 BlendTree:
   m_ObjectHideFlags: 3
@@ -3938,7 +4015,7 @@ AnimatorState:
   m_Transitions:
   - {fileID: 7332647965201707503}
   m_StateMachineBehaviours:
-  - {fileID: 8045027272585411082}
+  - {fileID: 2564343405315078216}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4194,23 +4271,6 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
---- !u!114 &5247620850794626293
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad693264f5dbaa145a6004c8a21bcafc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackWaitTime: 0.5
-  specialAttackWaitTime: 1
-  barkAttackPrefab: {fileID: 8071918518702842497, guid: d25607ad73a3e454ab6fd52534982915,
-    type: 3}
-  specialAttackName: TRIPLE CHARGE
 --- !u!206 &5455966582820580336
 BlendTree:
   m_ObjectHideFlags: 1
@@ -4241,7 +4301,7 @@ AnimatorState:
   - {fileID: 4879090797903379470}
   - {fileID: 4060726476131133260}
   m_StateMachineBehaviours:
-  - {fileID: 8960979532071494175}
+  - {fileID: 7928865659660313985}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -4700,7 +4760,7 @@ AnimatorState:
   - {fileID: -7016924513498053059}
   - {fileID: 6591060749550778493}
   m_StateMachineBehaviours:
-  - {fileID: -2403615735351146726}
+  - {fileID: -4898373071406687551}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -5433,6 +5493,20 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+--- !u!114 &7928865659660313985
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e06f11062e49214e939d4b2a8fb8ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDistance: 3
+  attackCooldown: 1
 --- !u!1102 &7929002657552897018
 AnimatorState:
   serializedVersion: 5
@@ -5447,7 +5521,7 @@ AnimatorState:
   - {fileID: 6180147616385887356}
   - {fileID: 3799847872597384505}
   m_StateMachineBehaviours:
-  - {fileID: -7144803449362080947}
+  - {fileID: -6728012761783234149}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -5556,7 +5630,7 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
---- !u!114 &8045027272585411082
+--- !u!114 &8068533238605219542
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5565,12 +5639,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46a62ce1fae10e247892a9f7e3b7cda8, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bb5a151bfdb6294ba542d442d4c1fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackImpulse: 120
-  attackDamage: 20
-  attackKnockback: 100
+  waitTime: 3
+  wanderingOffset: 8
 --- !u!1101 &8072615776988116003
 AnimatorStateTransition:
   m_ObjectHideFlags: 3
@@ -5784,6 +5857,21 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+--- !u!114 &8470335949766010527
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 571bd5f01a5e769448424b1f59f714b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDistance: 0
+  fallbackDistance: 0
+  attackCooldown: 0
 --- !u!206 &8533039521164491445
 BlendTree:
   m_ObjectHideFlags: 3
@@ -6019,20 +6107,6 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
---- !u!114 &8960979532071494175
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e06f11062e49214e939d4b2a8fb8ad0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDistance: 5
-  attackCooldown: 4
 --- !u!206 &8998776954955262157
 BlendTree:
   m_ObjectHideFlags: 3
@@ -6080,3 +6154,17 @@ BlendTree:
   m_UseAutomaticThresholds: 1
   m_NormalizedBlendValues: 0
   m_BlendType: 1
+--- !u!114 &9197734289298336655
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ebad8329dc27ee4e90a67869673927f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recoilImpulse: 0
+  attackDamage: 0

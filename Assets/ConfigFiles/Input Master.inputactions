@@ -100,6 +100,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Respawn",
+                    "type": "Button",
+                    "id": "d756bb49-7c4d-41a3-b58d-67d582830dfc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -485,6 +493,28 @@
                     "processors": "",
                     "groups": "Keyboard + mouse",
                     "action": "Concentration",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "34f8d87f-254f-4d58-9b36-21b93ff34796",
+                    "path": "<Keyboard>/o",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard + mouse",
+                    "action": "Respawn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "54a2b026-eac7-4a79-b88e-23a34fbc75ed",
+                    "path": "<Gamepad>/select",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Controller",
+                    "action": "Respawn",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

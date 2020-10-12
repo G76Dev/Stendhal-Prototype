@@ -20,8 +20,9 @@ public class ForceApplier : MonoBehaviour
     // call this function to add an impact force:
     public void AddImpact(Vector3 dir, float force)
     {
+        
         dir.Normalize();
-        if (dir.y < 0) dir.y = -dir.y; // reflect down force on the ground
+        //if (dir.y < 0) dir.y = -dir.y; // reflect down force on the ground
         impact += dir.normalized * force / mass; //Añade un impacto en la dirección indicada, con la fuerza indicada, dependiendo de la masa del objeto.
     }
 

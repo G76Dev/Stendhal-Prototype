@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recoilImpulse: 10
-  attackDamage: 10
+  attackDamage: 25
 --- !u!206 &-8244335309265082319
 BlendTree:
   m_ObjectHideFlags: 1
@@ -410,7 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3588dcba556e1a44be814fdb0ba4c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recoilImpulse: 30
+  recoilImpulse: 50
   animaKillerPrefab: {fileID: 2571427375249778916, guid: 65cf32fdc14c40d48acb63ea93dda920,
     type: 3}
 --- !u!1101 &-7016924513498053059
@@ -4135,8 +4135,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571bd5f01a5e769448424b1f59f714b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDistance: 15
-  fallbackDistance: 8
+  attackDistance: 12
+  fallbackDistance: 3
   attackCooldown: 3
 --- !u!1102 &6758595876472298404
 AnimatorState:
@@ -5148,8 +5148,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 571bd5f01a5e769448424b1f59f714b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDistance: 10
-  fallbackDistance: 8
+  attackDistance: 12
+  fallbackDistance: 3
   attackCooldown: 3
 --- !u!206 &8533039521164491445
 BlendTree:
@@ -5472,8 +5472,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b720e795a2f2a4ca17d19f5a900fce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackWaitTime: 2
-  specialAttackWaitTime: 3
+  attackWaitTime: 1
+  specialAttackWaitTime: 2
   barkAttackPrefab: {fileID: 8071918518702842497, guid: d25607ad73a3e454ab6fd52534982915,
     type: 3}
   specialAttackName: ANIMA KILLER
