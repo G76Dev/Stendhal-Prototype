@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{ccc0aa85-81dd-479b-ab5b-0235d1480770}">
+		<property name="assetPath">
+			<value>enemy0000A.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>401.19999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fdc5d3e8-2757-41fa-9bae-cc31289f802c}</destination>
+		</relationship>
+	</object>
+</objects>
