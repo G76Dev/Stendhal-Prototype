@@ -2699,10 +2699,10 @@ MonoBehaviour:
     m_PreExtrapolationTime: 0
     m_DisplayName: Inital cutscene cam 2
   - m_Version: 1
-    m_Start: 12.699999999999996
+    m_Start: 15.833333333333334
     m_ClipIn: 0
     m_Asset: {fileID: 5113560307383444984}
-    m_Duration: 8.883333333333335
+    m_Duration: 5.7499999999999964
     m_TimeScale: 1
     m_ParentTrack: {fileID: 6350964638218368303}
     m_EaseInDuration: 0
@@ -2753,7 +2753,7 @@ MonoBehaviour:
     m_Start: 0
     m_ClipIn: 0
     m_Asset: {fileID: -1679048525092042709}
-    m_Duration: 12.699999999999996
+    m_Duration: 15.833333333333334
     m_TimeScale: 1
     m_ParentTrack: {fileID: 6350964638218368303}
     m_EaseInDuration: 0
