@@ -13,6 +13,10 @@ public class CombatManager : MonoBehaviour
 
     public bool onCombat;
 
+    public int combatState;
+
+    private CombatController player;
+
 
     private void Awake()
     {
@@ -26,6 +30,11 @@ public class CombatManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(this); //Ah, y no destruyas esto al cargar
+    }
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<CombatController>();
     }
 
     public void showAllStats()
@@ -51,11 +60,64 @@ public class CombatManager : MonoBehaviour
         if(!onCombat)
         {
             combatHUD.SetActive(false);
+            combatState = -1;
         } 
         else
         {
             combatHUD.SetActive(true);
+            calculateCombatState();
+
         }
+    }
+
+    private void calculateCombatState()
+    {
+        if (player.isDead)
+        {
+            combatState = 0;
+            print("RIP Player");
+        }
+        else if (player.health <= (player.maxHealth / 4))
+        {
+            combatState = 1;
+            print("Player LowHP!");
+        }
+        else if (EnemiesLowHP())
+        {
+            combatState = 2;
+            print("Enemy LowHP!");
+        }
+        else
+        {
+            combatState = 3;
+            print("Just defaulting over here");
+        }
+    }
+
+    public bool EnemiesLowHP ()
+    {
+        int totalHP = 0;
+        int actualHP = 0;
+
+        foreach (Enemy enemy in enemies)
+        {
+            totalHP += enemy.stats.health;
+        }
+
+        foreach (Enemy enemy in enemies)
+        {
+            actualHP += enemy.currentHealth;
+        }
+
+        if (actualHP <= (totalHP / 4))
+        {
+            return true;
+        } 
+        else
+        {
+            return false;
+        }
+
     }
 
 

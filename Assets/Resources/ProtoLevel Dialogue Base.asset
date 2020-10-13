@@ -595,7 +595,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: ...
+        value: '>...'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -666,7 +666,7 @@ MonoBehaviour:
         type: 0
         typeString: 
       - title: Dialogue Text
-        value: You have arrived to quite an ominous place...
+        value: '>You have arrived to quite an ominous place...'
         type: 0
         typeString: 
       - title: Parenthetical
@@ -1906,8 +1906,8 @@ MonoBehaviour:
         y: 670
         width: 160
         height: 30
-    canvasScrollPosition: {x: 0, y: 218.34283}
-    canvasZoom: 0.7300002
+    canvasScrollPosition: {x: 5.6181655, y: 4.785849}
+    canvasZoom: 0.7900002
   syncInfo:
     syncActors: 0
     syncItems: 0

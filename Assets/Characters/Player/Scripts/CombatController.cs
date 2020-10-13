@@ -30,8 +30,8 @@ public class CombatController : MonoBehaviour
     private PlayerInput playerInput;
 
     [Header("Combat variables", order = 2)]
-    [SerializeField] int maxHealth = 150;
-    private int health;
+    public int maxHealth = 150;
+    [HideInInspector] public int health;
     private HealthBarController healthBar;
     private EnemyHealthBar enemyHPBar;
     private EnemyWillPowerBar enemyWPBar;
@@ -39,6 +39,7 @@ public class CombatController : MonoBehaviour
     [HideInInspector] public bool canAttack;
     [HideInInspector] public bool isVulnerable;
     [HideInInspector] public bool isBlocking;
+    [HideInInspector] public bool isDead;
     private int noOfTaps; //Número de taps o clicks que ha realizado el jugador desde que comenzó su combo de ataque.
 
     //LOCK ON SYSTEM VARIABLES
@@ -717,6 +718,7 @@ public class CombatController : MonoBehaviour
             healthBar.setHealth(health);
             if (health <= 0)
             {
+                isDead = true;
                 //Die & play die animation
                 movementController.canMove = false;
             }
