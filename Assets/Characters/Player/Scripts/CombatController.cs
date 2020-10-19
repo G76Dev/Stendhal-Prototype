@@ -141,9 +141,12 @@ public class CombatController : MonoBehaviour
 
     public void OnAttack()
     {
+        print("evento recibido");
+        print(canAttack);
         if (canAttack)
         {
             noOfTaps++; //En cada paso del combo, si se puede atacar, acumula un "tap"
+            print("aumentando noOfTaps");
 
             //Hacemos que el jugador se oriente hacia su enemigo fijado, para que los combos sean fluidos y comodos de ejecutar.
             if (lockedEnemy != null)
