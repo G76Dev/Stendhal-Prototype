@@ -43,6 +43,7 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] GameObject statsWidgetPrefab;
     private GameObject statsWidget; //Gameobject que alamcenará el widget visual con la información de combate específica de este enemigo.
+    private float timeOutTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -128,12 +129,20 @@ public class Enemy : MonoBehaviour
         if(onScreen && !addedToList)
         {
             addedToList = true;
+            timeOutTimer = 0;
             CombatManager.CM.enemies.Add(this);
         } 
         else if(!onScreen) //Pero si sale de la pantalla, no nos interesa mantenerlo en la lista, de manera que lo quitamos.
         {
-            addedToList = false;
-            CombatManager.CM.enemies.Remove(this);
+            //Si el enemigo esta fuera de la pantalla,
+            timeOutTimer += Time.deltaTime; //corre el contador de tiempo,
+            if(timeOutTimer >= 4500) //si dicho contador supera los 4,5 segundos fuera de pantalla
+            {
+                //quita al enemigo de la lista
+                addedToList = false;
+                CombatManager.CM.enemies.Remove(this);
+                timeOutTimer = 0;
+            }
         }
 
         if (onScreen && addedToList)

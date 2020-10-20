@@ -156,7 +156,7 @@ public class CombatController : MonoBehaviour
             //    playerTransform.LookAt(new Vector3(attackPointer.position.x, playerTransform.position.y, attackPointer.position.z));
         }
 
-        if (noOfTaps == 1) //Si el número de  taps es exactamente 1,
+        if (noOfTaps == 1) //Si el número de  taps es exactamente 1, PRIMER GOLPE DEL COMBO
         {
             //Activa el trigger del animador para que reproduzca la animación correspondiente.
             animator.SetTrigger("Attack");
@@ -465,7 +465,7 @@ public class CombatController : MonoBehaviour
             failedAttack();
         }
     }
-
+    
     public void usePotion(int healedAmount)
     {
         //Todo: comprobar si el jugador tiene pociones en su inventario.
@@ -779,7 +779,9 @@ public class CombatController : MonoBehaviour
         //todo: buscar una implementación más cómoda y escalable que permita crear nuevos combos más fácilmente
         canAttack = false; //Ponemos "canAttack" a false durante la comprobación del estado del combo. Una vez lo sepamos, lo volveremos a poner a true. Así evitamos malas lecutras.
 
-        if (weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName("Combo1") && noOfTaps == 1)
+        //CUANDO SE LLAMA POR PRIMERA VEZ A ESTA FUNCION, YA SE HA COMPLETADO EL PRIMER ATAQUE.
+
+        if (weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName("Combo1") && noOfTaps == 1) 
         {
             //Si no se han registrado nuevos "taps" antes de haber llegado a este punto en la animación, vuelve a "idle" y corta el combo.
             weaponAnimator.SetInteger("Animation", 0);
@@ -789,7 +791,7 @@ public class CombatController : MonoBehaviour
             noOfTaps = 0; //Como el combo ha terminado, reseteamos esta variable.
 
         }
-        else if (weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName("Combo1") && noOfTaps >= 1)
+        else if (weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName("Combo1") && noOfTaps >= 1) //AQUI SE LLAMA AL SEGUNDO ATAQUE DEL COMBO
         {
             //Si se han registrado uno o más taps durante la primera animación, eso quiere decir que el jugador quiere continuar con el combo.
             animator.SetTrigger("Attack");
@@ -807,7 +809,7 @@ public class CombatController : MonoBehaviour
             StartCoroutine(attackCooldown(weaponBehaviour.getCooldown())); //El cooldown entre ataques viene definido por el arma del usuario.
             noOfTaps = 0; //Como el combo ha terminado, reseteamos esta variable.
         }
-        else if (weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName("Combo2") && noOfTaps >= 3)
+        else if (weaponAnimator.GetCurrentAnimatorStateInfo(0).IsName("Combo2") && noOfTaps >= 3) //AQUI SE LLAMA AL TERCER ATAQUE DEL COMBO
         {
             //Si se han registrado nuevos taps durante el segundo ataque, eso quiere decir que el jugador quiere continuar con el combo.
             animator.SetTrigger("Attack");
