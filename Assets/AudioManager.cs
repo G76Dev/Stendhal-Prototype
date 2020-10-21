@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using FMOD.Studio;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -8,6 +9,22 @@ public class AudioManager : MonoBehaviour
 
     [FMODUnity.EventRef]
     public string fmodEvent;
+    [FMODUnity.EventRef]
+    public string fmodEventA;
+    [FMODUnity.EventRef]
+    public string fmodEventB;
+    [FMODUnity.EventRef]
+    public string fmodEventC;
+    [FMODUnity.EventRef]
+    public string fmodEventD;
+    [FMODUnity.EventRef]
+    public string fmodEventE;
+    [FMODUnity.EventRef]
+    public string fmodEventF;
+    [FMODUnity.EventRef]
+    public string fmodEventG;
+    [FMODUnity.EventRef]
+    public string fmodEventH;
 
     [SerializeField]
     public float segmentCode = 0.0f;
@@ -15,6 +32,7 @@ public class AudioManager : MonoBehaviour
     private float oldSegmentCode = 0.0f;
     private FMOD.Studio.EventInstance musicLevel0000;
     private FMOD.Studio.PARAMETER_ID segmentCodeParameterID;
+    private EventInstance internalEvent;
 
     private void Awake()
     {
@@ -51,4 +69,33 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    void OnAttack()
+    {
+        internalEvent = FMODUnity.RuntimeManager.CreateInstance(fmodEventA);
+        internalEvent.start();
+    }
+
+    void comboAttack()
+    {
+        internalEvent = FMODUnity.RuntimeManager.CreateInstance(fmodEventB);
+        internalEvent.start();
+    }
+
+    void bloodyThrust()
+    {
+        internalEvent = FMODUnity.RuntimeManager.CreateInstance(fmodEventC);
+        internalEvent.start();
+    }
+
+    void hatefulArrow()
+    {
+        internalEvent = FMODUnity.RuntimeManager.CreateInstance(fmodEventD);
+        internalEvent.start();
+    }
+
+    void usePotion()
+    {
+        internalEvent = FMODUnity.RuntimeManager.CreateInstance(fmodEventE);
+        internalEvent.start();
+    }
 }

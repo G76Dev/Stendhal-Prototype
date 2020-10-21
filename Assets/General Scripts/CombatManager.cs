@@ -13,8 +13,6 @@ public class CombatManager : MonoBehaviour
 
     public bool onCombat;
 
-    public int combatState;
-
     private CombatController player;
 
     private void Awake()
@@ -58,7 +56,7 @@ public void showAllStats()
         if (!onCombat)
         {
             combatHUD.SetActive(false);
-            combatState = -1;
+
             //AUDIO
             if (AudioManager.music.segmentCode != 0.0f)
             {
@@ -68,55 +66,35 @@ public void showAllStats()
         }
         else
         {
-            //AUDIO
-                if (AudioManager.music.segmentCode==0.0f)
-                {
-                    AudioManager.music.segmentCode = 1.0f;
-                }else if (combatState==3)
-                {
-                    AudioManager.music.segmentCode = 1.0f;
-                }
-                else if (combatState==2)
-                {
-                    AudioManager.music.segmentCode = 3.0f;
-  
-                }
-                else if (combatState == 1)
-                {
-                    AudioManager.music.segmentCode = 2.0f;
-                }else if (combatState == 1)
-                {
-                    AudioManager.music.segmentCode = 2.0f;
-                }
-            //
             combatHUD.SetActive(true);
             calculateCombatState();
         }
     }
 
+    //AUDIO
     private void calculateCombatState()
     {
         if (player.isDead)
         {
-            combatState = 0;
             print("RIP Player");
-        }
-        else if (player.health <= (player.maxHealth / 4))
-        {
-            combatState = 1;
-            print("Player LowHP!");
         }
         else if (EnemiesLowHP())
         {
-            combatState = 2;
             print("Enemy LowHP!");
+            AudioManager.music.segmentCode = 3.0f;
+        }
+        else if (player.health <= (player.maxHealth / 3))
+        {
+            print("Player LowHP!");
+            AudioManager.music.segmentCode = 2.0f;
         }
         else
         {
-            combatState = 3;
             print("Just defaulting over here");
+            AudioManager.music.segmentCode = 1.0f;
         }
     }
+    //
 
     public bool EnemiesLowHP ()
     {
