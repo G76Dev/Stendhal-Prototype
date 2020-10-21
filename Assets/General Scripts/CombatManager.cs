@@ -59,7 +59,13 @@ public void showAllStats()
         {
             combatHUD.SetActive(false);
             combatState = -1;
-        } 
+            //AUDIO
+            if (AudioManager.music.segmentCode != 0.0f)
+            {
+                AudioManager.music.segmentCode = 0.0f;
+            }
+            //
+        }
         else
         {
             //AUDIO
@@ -78,12 +84,13 @@ public void showAllStats()
                 else if (combatState == 1)
                 {
                     AudioManager.music.segmentCode = 2.0f;
-                    Debug.Log("BANANA");
-            }
+                }else if (combatState == 1)
+                {
+                    AudioManager.music.segmentCode = 2.0f;
+                }
             //
             combatHUD.SetActive(true);
             calculateCombatState();
-  
         }
     }
 
