@@ -52,6 +52,40 @@ MonoBehaviour:
   Max: 8
   Default: 0
   Exists: 0
+--- !u!114 &-7956781238070650565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/level0000/segmentCode
+  m_EditorClassIdentifier: 
+  Name: segmentCode
+  Min: 0
+  Max: 24
+  Default: 0
+  Exists: 0
+--- !u!114 &-7817836683593634899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/level0000/segmentCode
+  m_EditorClassIdentifier: 
+  Name: segmentCode
+  Min: 0
+  Max: 24
+  Default: 0
+  Exists: 0
 --- !u!114 &-7803048073554396279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +103,7 @@ MonoBehaviour:
   lastModified: 637388608810644877
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7784298082883555638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,7 +229,7 @@ MonoBehaviour:
   Path: event:/AUDIO/SFX/windLoopA
   guid: 43a7ec036e1f2f4cb3035e85e688d1f1
   Banks:
-  - {fileID: -7803048073554396279}
+  - {fileID: 711503740653957841}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -237,6 +271,75 @@ MonoBehaviour:
   Max: 24
   Default: 0
   Exists: 0
+--- !u!114 &-5721635680703566032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/level0000/segmentCode
+  m_EditorClassIdentifier: 
+  Name: segmentCode
+  Min: 0
+  Max: 24
+  Default: 0
+  Exists: 0
+--- !u!114 &-5641261085313917478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Stendhal-Prototype/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637388667065640585
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-5471753555217187901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: segment
+  m_EditorClassIdentifier: 
+  Name: segment
+  Min: 0
+  Max: 8
+  Default: 0
+  Exists: 0
+--- !u!114 &-5334754659923664962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: segment
+  m_EditorClassIdentifier: 
+  Name: segment
+  Min: 0
+  Max: 8
+  Default: 0
+  Exists: 1
 --- !u!114 &-4653302228479403558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +393,42 @@ MonoBehaviour:
   Max: 24
   Default: 0
   Exists: 1
+--- !u!114 &-3314260081966472837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Stendhal-Prototype/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637388661474696669
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-3007338250080522361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Stendhal-Prototype/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637388654449395624
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-2951333009536157461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +498,59 @@ MonoBehaviour:
   Min: 0
   Max: 8
   Default: 0
+  Exists: 0
+--- !u!114 &-1848285322416404918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/level0000/segmentCode
+  m_EditorClassIdentifier: 
+  Name: segmentCode
+  Min: 0
+  Max: 24
+  Default: 0
+  Exists: 0
+--- !u!114 &-1699309485234131199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Stendhal-Prototype/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637388650663319711
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-1585185383413680546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Stendhal-Prototype/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637388713291521501
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &-1397535753214806718
 MonoBehaviour:
@@ -434,6 +626,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-77053452020866844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: segment
+  m_EditorClassIdentifier: 
+  Name: segment
+  Min: 0
+  Max: 8
+  Default: 0
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -448,18 +657,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5977708686756856667}
-  - {fileID: -7803048073554396279}
+  - {fileID: 711503740653957841}
   EditorEvents:
   - {fileID: 1287541590483367235}
   - {fileID: -6342377578020052651}
   - {fileID: 2837680035777426619}
   EditorParameters:
-  - {fileID: 179266141253763614}
+  - {fileID: -5334754659923664962}
   MasterBanks:
-  - {fileID: -7803048073554396279}
+  - {fileID: 711503740653957841}
   StringsBanks:
   - {fileID: 5977708686756856667}
-  stringsBankWriteTime: 637388608815032255
+  stringsBankWriteTime: 637388723870141552
   cacheVersion: 3
 --- !u!114 &144804424533963517
 MonoBehaviour:
@@ -495,7 +704,7 @@ MonoBehaviour:
   Min: 0
   Max: 8
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &489010305868392797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,7 +721,24 @@ MonoBehaviour:
   Min: 0
   Max: 24
   Default: 0
-  Exists: 1
+  Exists: 0
+--- !u!114 &518272298461762748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/level0000/segmentCode
+  m_EditorClassIdentifier: 
+  Name: segmentCode
+  Min: 0
+  Max: 24
+  Default: 0
+  Exists: 0
 --- !u!114 &527159682731875482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,6 +773,24 @@ MonoBehaviour:
   Max: 24
   Default: 0
   Exists: 0
+--- !u!114 &711503740653957841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Stendhal-Prototype/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637388723864347073
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &760256847383495426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,6 +900,23 @@ MonoBehaviour:
   Max: 24
   Default: 0
   Exists: 0
+--- !u!114 &1764778065212755932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/level0000/segmentCode
+  m_EditorClassIdentifier: 
+  Name: segmentCode
+  Min: 0
+  Max: 24
+  Default: 0
+  Exists: 1
 --- !u!114 &1792797786373725771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,15 +983,15 @@ MonoBehaviour:
   Path: event:/AUDIO/BGM/level0000
   guid: 890f497e646c9646b18945d346cb3564
   Banks:
-  - {fileID: -7803048073554396279}
+  - {fileID: 711503740653957841}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 489010305868392797}
+  - {fileID: 1764778065212755932}
   MinDistance: 0
   MaxDistance: 0
-  Length: 1118056
+  Length: 1459200
 --- !u!114 &3036505472837942397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,6 +1155,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &5294183520692348996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/level0000/segmentCode
+  m_EditorClassIdentifier: 
+  Name: segmentCode
+  Min: 0
+  Max: 24
+  Default: 0
+  Exists: 0
 --- !u!114 &5371384765503116291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -930,6 +1208,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &5633585609934782858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: segment
+  m_EditorClassIdentifier: 
+  Name: segment
+  Min: 0
+  Max: 8
+  Default: 0
+  Exists: 0
 --- !u!114 &5713850046254152657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -947,6 +1242,23 @@ MonoBehaviour:
   lastModified: 637388581817175032
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &5736822383715794737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: segment
+  m_EditorClassIdentifier: 
+  Name: segment
+  Min: 0
+  Max: 8
+  Default: 0
   Exists: 0
 --- !u!114 &5870111703267668484
 MonoBehaviour:
@@ -996,7 +1308,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Stendhal-Prototype/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637388608815032255
+  lastModified: 637388723870141552
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1037,6 +1349,24 @@ MonoBehaviour:
   Max: 8
   Default: 0
   Exists: 1
+--- !u!114 &6514773542878088308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Stendhal-Prototype/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637388706527725734
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &6778934357152881815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1052,6 +1382,23 @@ MonoBehaviour:
   Name: segmentCode
   Min: 0
   Max: 24
+  Default: 0
+  Exists: 0
+--- !u!114 &6908414749445073479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: segment
+  m_EditorClassIdentifier: 
+  Name: segment
+  Min: 0
+  Max: 8
   Default: 0
   Exists: 0
 --- !u!114 &7009661936522929417

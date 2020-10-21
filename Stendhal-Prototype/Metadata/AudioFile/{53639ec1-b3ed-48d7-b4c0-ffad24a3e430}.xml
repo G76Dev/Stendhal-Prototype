@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{53639ec1-b3ed-48d7-b4c0-ffad24a3e430}">
+		<property name="assetPath">
+			<value>combat0000loopC.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>55.631999999999998</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fdc5d3e8-2757-41fa-9bae-cc31289f802c}</destination>
+		</relationship>
+	</object>
+</objects>

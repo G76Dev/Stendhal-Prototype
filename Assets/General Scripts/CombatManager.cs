@@ -66,7 +66,20 @@ public void showAllStats()
                 if (AudioManager.music.segmentCode==0.0f)
                 {
                     AudioManager.music.segmentCode = 1.0f;
+                }else if (combatState==3)
+                {
+                    AudioManager.music.segmentCode = 1.0f;
                 }
+                else if (combatState==2)
+                {
+                    AudioManager.music.segmentCode = 3.0f;
+  
+                }
+                else if (combatState == 1)
+                {
+                    AudioManager.music.segmentCode = 2.0f;
+                    Debug.Log("BANANA");
+            }
             //
             combatHUD.SetActive(true);
             calculateCombatState();
