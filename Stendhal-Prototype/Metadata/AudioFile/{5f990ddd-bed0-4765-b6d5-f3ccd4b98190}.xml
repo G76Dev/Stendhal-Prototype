@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{5f990ddd-bed0-4765-b6d5-f3ccd4b98190}">
+		<property name="assetPath">
+			<value>windLoopA.mp3</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>60.048000000000002</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{fdc5d3e8-2757-41fa-9bae-cc31289f802c}</destination>
+		</relationship>
+	</object>
+</objects>

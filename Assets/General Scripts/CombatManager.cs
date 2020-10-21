@@ -17,7 +17,6 @@ public class CombatManager : MonoBehaviour
 
     private CombatController player;
 
-
     private void Awake()
     {
         if(CM != null) //Si por algún motivo ya existe un combatManager...
@@ -37,7 +36,7 @@ public class CombatManager : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<CombatController>();
     }
 
-    public void showAllStats()
+public void showAllStats()
     {
         foreach(Enemy enemy in enemies)
         {
@@ -56,17 +55,22 @@ public class CombatManager : MonoBehaviour
     private void Update()
     {
         onCombat = enemies.Count > 0; //Si hay al menos un enemigo en la lista, eso significa que estamos en un combate.
-
-        if(!onCombat)
+        if (!onCombat)
         {
             combatHUD.SetActive(false);
             combatState = -1;
         } 
         else
         {
+            //AUDIO
+                if (AudioManager.music.segmentCode==0.0f)
+                {
+                    AudioManager.music.segmentCode = 1.0f;
+                }
+            //
             combatHUD.SetActive(true);
             calculateCombatState();
-
+  
         }
     }
 
