@@ -58,9 +58,9 @@ public void showAllStats()
             combatHUD.SetActive(false);
 
             //AUDIO
-            if (AudioManager.music.segmentCode != 0.0f)
+            if (AudioManager.engine.segmentCode != 0.0f)
             {
-                AudioManager.music.segmentCode = 0.0f;
+                AudioManager.engine.segmentCode = 0.0f;
             }
             //
         }
@@ -81,17 +81,17 @@ public void showAllStats()
         else if (EnemiesLowHP())
         {
             print("Enemy LowHP!");
-            AudioManager.music.segmentCode = 3.0f;
+            AudioManager.engine.segmentCode = 3.0f;
         }
         else if (player.health <= (player.maxHealth / 3))
         {
             print("Player LowHP!");
-            AudioManager.music.segmentCode = 2.0f;
+            AudioManager.engine.segmentCode = 2.0f;
         }
         else
         {
             print("Just defaulting over here");
-            AudioManager.music.segmentCode = 1.0f;
+            AudioManager.engine.segmentCode = 1.0f;
         }
     }
     //

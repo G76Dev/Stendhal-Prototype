@@ -233,7 +233,6 @@ public class MovementController : MonoBehaviour
                 {
                     controller.Move(moveDir.normalized * speed * Time.deltaTime);
                 }
-
             }
             else //Si no, para en seco al jugador.
             {
@@ -259,9 +258,20 @@ public class MovementController : MonoBehaviour
         velocity.y /= 1 + drag.y * Time.deltaTime;
         velocity.z /= 1 + drag.z * Time.deltaTime;
 
-        if (canMove)
+        if (canMove) {
+            //AUDIO
+            if (direction.magnitude > 0){ 
+                AudioManager.engine.walkCyclePlay();
+            }
+            //
             controller.Move(velocity * Time.deltaTime); //Finalmente, tras todas las simulaciones necesarias, movemos al jugador en función de la velocidad calculada
-
+        }
+        //AUDIO
+        if (direction.magnitude <= 0)
+        {
+            AudioManager.engine.walkCycleStop();
+        }
+        //
     }
 
 

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EventFolder" id="{82096599-032c-46bf-9946-8218323bb150}">
+		<property name="name">
+			<value>WOOSH</value>
+		</property>
+		<relationship name="folder">
+			<destination>{a8ef5b3f-ac46-4ba8-b73c-b9715e8a073d}</destination>
+		</relationship>
+	</object>
+</objects>

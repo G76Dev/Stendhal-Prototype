@@ -5,26 +5,9 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager music;
-
+    public static AudioManager engine;
     [FMODUnity.EventRef]
     public string fmodEvent;
-    [FMODUnity.EventRef]
-    public string fmodEventA;
-    [FMODUnity.EventRef]
-    public string fmodEventB;
-    [FMODUnity.EventRef]
-    public string fmodEventC;
-    [FMODUnity.EventRef]
-    public string fmodEventD;
-    [FMODUnity.EventRef]
-    public string fmodEventE;
-    [FMODUnity.EventRef]
-    public string fmodEventF;
-    [FMODUnity.EventRef]
-    public string fmodEventG;
-    [FMODUnity.EventRef]
-    public string fmodEventH;
 
     [SerializeField]
     public float segmentCode = 0.0f;
@@ -32,17 +15,20 @@ public class AudioManager : MonoBehaviour
     private float oldSegmentCode = 0.0f;
     private FMOD.Studio.EventInstance musicLevel0000;
     private FMOD.Studio.PARAMETER_ID segmentCodeParameterID;
-    private EventInstance internalEvent;
+    private static EventInstance internalEvent;
+
+    private bool walkCycle = false;
+    private static EventInstance instance;
 
     private void Awake()
     {
-        if (music != null)
+        if (engine != null)
         {
-            GameObject.Destroy(music);
+            GameObject.Destroy(engine);
         }
         else
         {
-            music = this;
+            engine = this;
         }
         DontDestroyOnLoad(this);
     }
@@ -69,33 +55,47 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    void OnAttack()
+    public void OnAttack()
     {
-        internalEvent = FMODUnity.RuntimeManager.CreateInstance(fmodEventA);
-        internalEvent.start();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/AUDIO/SFX/SWORD/WOOSH/swordWoosh", GameObject.FindGameObjectWithTag("Player").transform.position);
     }
 
     void comboAttack()
     {
-        internalEvent = FMODUnity.RuntimeManager.CreateInstance(fmodEventB);
-        internalEvent.start();
+
     }
 
     void bloodyThrust()
     {
-        internalEvent = FMODUnity.RuntimeManager.CreateInstance(fmodEventC);
-        internalEvent.start();
+
     }
 
     void hatefulArrow()
     {
-        internalEvent = FMODUnity.RuntimeManager.CreateInstance(fmodEventD);
-        internalEvent.start();
+
     }
 
-    void usePotion()
+    public void usePotion()
     {
-        internalEvent = FMODUnity.RuntimeManager.CreateInstance(fmodEventE);
-        internalEvent.start();
+        FMODUnity.RuntimeManager.PlayOneShot("event:/AUDIO/SFX/ITEMS/COMBAT/usePotion", GameObject.FindGameObjectWithTag("Player").transform.position);
+    }
+
+    public void walkCyclePlay()
+    {
+        if (!walkCycle) {
+            instance = FMODUnity.RuntimeManager.CreateInstance("event:/AUDIO/SFX/WALK/STEPS/walkCycle");
+            instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(GameObject.FindGameObjectWithTag("Player")));
+            instance.start();
+            walkCycle = true;
+        }
+    }
+
+    public void walkCycleStop()
+    {
+        if (walkCycle)
+        {
+            instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+            walkCycle = false;
+        }
     }
 }

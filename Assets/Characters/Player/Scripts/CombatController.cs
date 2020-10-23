@@ -145,6 +145,9 @@ public class CombatController : MonoBehaviour
         print(canAttack);
         if (canAttack)
         {
+            //AUDIO
+            AudioManager.engine.OnAttack();
+            //
             noOfTaps++; //En cada paso del combo, si se puede atacar, acumula un "tap"
             print("aumentando noOfTaps");
 
@@ -481,6 +484,10 @@ public class CombatController : MonoBehaviour
 
         //Accion realizada
         playerInput.SwitchCurrentActionMap("Player");
+
+        //AUDIO
+        AudioManager.engine.usePotion();
+        //
     }
 
     private void failedAttack()
