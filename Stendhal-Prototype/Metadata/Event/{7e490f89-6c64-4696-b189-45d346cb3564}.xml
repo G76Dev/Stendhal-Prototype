@@ -1123,7 +1123,7 @@
 	</object>
 	<object class="TransitionSourceSound" id="{77f24b41-e2d9-48e0-accf-3dfe4565b48d}">
 		<property name="length">
-			<value>11.200000000000001</value>
+			<value>16</value>
 		</property>
 		<relationship name="fadeOutCurve">
 			<destination>{107b6f3f-7f5b-4860-bc2e-7ca2bf138435}</destination>
@@ -3492,10 +3492,7 @@
 			<value>511.99999999999989</value>
 		</property>
 		<property name="quantizationInterval">
-			<value>2</value>
-		</property>
-		<property name="transitionOffset">
-			<value>1</value>
+			<value>5</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{00f7588e-a4cc-432b-9e00-d6c5b3b514ed}</destination>
@@ -3532,7 +3529,7 @@
 			<value>704</value>
 		</property>
 		<property name="length">
-			<value>6.4000000000000696</value>
+			<value>12.800000000000047</value>
 		</property>
 		<property name="name">
 			<value>enemy0000introA</value>
@@ -3555,7 +3552,10 @@
 			<value>179.1999999999999</value>
 		</property>
 		<property name="quantizationInterval">
-			<value>2</value>
+			<value>5</value>
+		</property>
+		<property name="transitionOffset">
+			<value>1</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{00f7588e-a4cc-432b-9e00-d6c5b3b514ed}</destination>
@@ -3581,7 +3581,10 @@
 			<value>102.39999999999995</value>
 		</property>
 		<property name="quantizationInterval">
-			<value>2</value>
+			<value>5</value>
+		</property>
+		<property name="transitionOffset">
+			<value>1</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{00f7588e-a4cc-432b-9e00-d6c5b3b514ed}</destination>
@@ -3607,7 +3610,10 @@
 			<value>64.000000000000085</value>
 		</property>
 		<property name="quantizationInterval">
-			<value>2</value>
+			<value>5</value>
+		</property>
+		<property name="transitionOffset">
+			<value>1</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{00f7588e-a4cc-432b-9e00-d6c5b3b514ed}</destination>
@@ -3713,7 +3719,10 @@
 			<value>25.600000000000222</value>
 		</property>
 		<property name="quantizationInterval">
-			<value>2</value>
+			<value>5</value>
+		</property>
+		<property name="transitionOffset">
+			<value>1</value>
 		</property>
 		<relationship name="timeline">
 			<destination>{00f7588e-a4cc-432b-9e00-d6c5b3b514ed}</destination>
@@ -4713,18 +4722,15 @@
 	<object class="MixerBusFader" id="{6a4f2bc9-f0cc-4020-84b1-6a4d99c76695}" />
 	<object class="AutomationPoint" id="{e0727605-facb-494e-bd32-8f70650f19a0}">
 		<property name="position">
-			<value>0</value>
+			<value>3.1999999999999993</value>
 		</property>
 		<property name="value">
 			<value>1</value>
 		</property>
-		<property name="curveShape">
-			<value>0.25471893</value>
-		</property>
 	</object>
 	<object class="AutomationPoint" id="{3face540-4ba7-4b32-ae43-44078d76a746}">
 		<property name="position">
-			<value>11.200000000000001</value>
+			<value>16</value>
 		</property>
 		<property name="value">
 			<value>0</value>

@@ -58,10 +58,7 @@ public void showAllStats()
             combatHUD.SetActive(false);
 
             //AUDIO
-            if (AudioManager.engine.segmentCode != 0.0f)
-            {
                 AudioManager.engine.segmentCode = 0.0f;
-            }
             //
         }
         else
@@ -83,7 +80,7 @@ public void showAllStats()
             print("Enemy LowHP!");
             AudioManager.engine.segmentCode = 3.0f;
         }
-        else if (player.health <= (player.maxHealth / 3))
+        else if (player.health <= (player.maxHealth / 2))
         {
             print("Player LowHP!");
             AudioManager.engine.segmentCode = 2.0f;

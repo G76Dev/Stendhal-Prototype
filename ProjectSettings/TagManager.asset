@@ -10,6 +10,7 @@ TagManager:
   - InferiorCanvas
   - movingPlatform
   - PlayerStart
+  - AudioListener
   layers:
   - Default
   - TransparentFX

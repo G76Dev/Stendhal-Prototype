@@ -87,7 +87,6 @@ public class AudioManager : MonoBehaviour
             instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(GameObject.FindGameObjectWithTag("Player")));
             instance.start();
             walkCycle = true;
-            Debug.Log("START WALK.");
         }
     }
 
@@ -97,7 +96,6 @@ public class AudioManager : MonoBehaviour
         {
             instance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
             walkCycle = false;
-            Debug.Log("STOP WALK.");
         }
     }
 }

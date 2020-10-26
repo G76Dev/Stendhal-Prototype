@@ -258,9 +258,10 @@ public class MovementController : MonoBehaviour
         velocity.y /= 1 + drag.y * Time.deltaTime;
         velocity.z /= 1 + drag.z * Time.deltaTime;
 
-        if (canMove && isGrounded) {
+        if (canMove) {
             //AUDIO
-            if (direction.magnitude > 0){ 
+            if (direction.magnitude > 0 && isGrounded)
+            { 
                 AudioManager.engine.walkCyclePlay();
             }
             //
