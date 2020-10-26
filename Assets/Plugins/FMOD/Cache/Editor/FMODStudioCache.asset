@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/AUDIO/SFX/ITEMS/COMBAT/usePotion
   guid: e97a2c20efe58d4099c7b98caf3ee855
   Banks:
-  - {fileID: 1222135047647338927}
+  - {fileID: 4428251540431156038}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -39,6 +39,24 @@ MonoBehaviour:
   Min: 0
   Max: 24
   Default: 0
+  Exists: 0
+--- !u!114 &-9165495916900818567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Stendhal-Prototype/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637392877967052537
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &-9078664944910374220
 MonoBehaviour:
@@ -373,7 +391,7 @@ MonoBehaviour:
   Path: event:/AUDIO/SFX/windLoopA
   guid: 43a7ec036e1f2f4cb3035e85e688d1f1
   Banks:
-  - {fileID: 1222135047647338927}
+  - {fileID: 4428251540431156038}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -467,6 +485,23 @@ MonoBehaviour:
   lastModified: 637388667065640585
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &-5616284669312621423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: segment
+  m_EditorClassIdentifier: 
+  Name: segment
+  Min: 0
+  Max: 8
+  Default: 0
   Exists: 0
 --- !u!114 &-5471753555217187901
 MonoBehaviour:
@@ -691,7 +726,7 @@ MonoBehaviour:
   Path: event:/AUDIO/SFX/wALK/STEPS/walkCycle
   guid: e815547d6211d94e891ab37ac4047cab
   Banks:
-  - {fileID: 1222135047647338927}
+  - {fileID: 4428251540431156038}
   IsStream: 0
   Is3D: 1
   IsOneShot: 0
@@ -1083,7 +1118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 5977708686756856667}
-  - {fileID: 1222135047647338927}
+  - {fileID: 4428251540431156038}
   EditorEvents:
   - {fileID: 1287541590483367235}
   - {fileID: -6342377578020052651}
@@ -1092,12 +1127,12 @@ MonoBehaviour:
   - {fileID: -3050948872111028809}
   - {fileID: -9220110660881041249}
   EditorParameters:
-  - {fileID: 6957312386608968435}
+  - {fileID: 4595968549029385052}
   MasterBanks:
-  - {fileID: 1222135047647338927}
+  - {fileID: 4428251540431156038}
   StringsBanks:
   - {fileID: 5977708686756856667}
-  stringsBankWriteTime: 637390343246808025
+  stringsBankWriteTime: 637392898108707461
   cacheVersion: 3
 --- !u!114 &144804424533963517
 MonoBehaviour:
@@ -1289,7 +1324,7 @@ MonoBehaviour:
   lastModified: 637390343243079322
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &1234340240377041483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1517,12 +1552,12 @@ MonoBehaviour:
   Path: event:/AUDIO/BGM/level0000
   guid: 890f497e646c9646b18945d346cb3564
   Banks:
-  - {fileID: 1222135047647338927}
+  - {fileID: 4428251540431156038}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 8771532726005764477}
+  - {fileID: 7250935010882569039}
   MinDistance: 0
   MaxDistance: 0
   Length: 1459200
@@ -1577,6 +1612,23 @@ MonoBehaviour:
   lastModified: 637382315937858584
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &3298235334147902824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/level0000/segmentCode
+  m_EditorClassIdentifier: 
+  Name: segmentCode
+  Min: 0
+  Max: 24
+  Default: 0
   Exists: 0
 --- !u!114 &3579051156062775305
 MonoBehaviour:
@@ -1735,6 +1787,41 @@ MonoBehaviour:
   Max: 24
   Default: 0
   Exists: 0
+--- !u!114 &4428251540431156038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Stendhal-Prototype/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637392898104652863
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &4595968549029385052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: segment
+  m_EditorClassIdentifier: 
+  Name: segment
+  Min: 0
+  Max: 8
+  Default: 0
+  Exists: 1
 --- !u!114 &4604386551821276852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1999,7 +2086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Stendhal-Prototype/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637390343246808025
+  lastModified: 637392898108707461
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -2161,7 +2248,7 @@ MonoBehaviour:
   Min: 0
   Max: 8
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &7009661936522929417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2179,6 +2266,23 @@ MonoBehaviour:
   Max: 24
   Default: 0
   Exists: 0
+--- !u!114 &7250935010882569039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/level0000/segmentCode
+  m_EditorClassIdentifier: 
+  Name: segmentCode
+  Min: 0
+  Max: 24
+  Default: 0
+  Exists: 1
 --- !u!114 &7415325555737844712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2334,7 +2438,7 @@ MonoBehaviour:
   Path: event:/AUDIO/SFX/SWORD/WOOSH/swordWoosh
   guid: c006635c2bbb534db3d9cba045cc157d
   Banks:
-  - {fileID: 1222135047647338927}
+  - {fileID: 4428251540431156038}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2358,7 +2462,7 @@ MonoBehaviour:
   Min: 0
   Max: 24
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &8810428490921123888
 MonoBehaviour:
   m_ObjectHideFlags: 0

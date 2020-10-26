@@ -258,7 +258,7 @@ public class MovementController : MonoBehaviour
         velocity.y /= 1 + drag.y * Time.deltaTime;
         velocity.z /= 1 + drag.z * Time.deltaTime;
 
-        if (canMove) {
+        if (canMove && isGrounded) {
             //AUDIO
             if (direction.magnitude > 0){ 
                 AudioManager.engine.walkCyclePlay();
@@ -267,7 +267,7 @@ public class MovementController : MonoBehaviour
             controller.Move(velocity * Time.deltaTime); //Finalmente, tras todas las simulaciones necesarias, movemos al jugador en función de la velocidad calculada
         }
         //AUDIO
-        if (direction.magnitude <= 0)
+        if (direction.magnitude <= 0 || !isGrounded)
         {
             AudioManager.engine.walkCycleStop();
         }
