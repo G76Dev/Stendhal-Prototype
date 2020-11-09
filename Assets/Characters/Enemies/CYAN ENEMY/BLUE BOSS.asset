@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: INNER ENVY
   animaType: {r: 0, g: 0.15021364, b: 0.9056604, a: 1}
-  health: 200
+  health: 400
   willpower: 140
   weaknesses:
   - {r: 1, g: 1, b: 1, a: 1}

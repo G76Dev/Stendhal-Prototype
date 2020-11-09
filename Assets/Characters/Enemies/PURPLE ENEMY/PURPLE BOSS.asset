@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: DIRTY THOUGHTS
   animaType: {r: 1, g: 0, b: 0.942749, a: 1}
-  health: 250
+  health: 500
   willpower: 100
   weaknesses:
   - {r: 1, g: 0.6039734, b: 0, a: 1}

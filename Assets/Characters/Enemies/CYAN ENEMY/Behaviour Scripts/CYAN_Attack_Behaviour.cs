@@ -20,6 +20,7 @@ public class CYAN_Attack_Behaviour : StateMachineBehaviour
         forceApplier = animator.gameObject.GetComponentInParent<ForceApplier>();
 
         enemy.transform.LookAt(target.transform.position);
+        enemy.isVulnerable = false;
 
         //-ATTACK SETUP-
         //Ignora la colisión entre el enemigo y el objetivo del ataque para que no obstaculice la embestida
@@ -44,9 +45,10 @@ public class CYAN_Attack_Behaviour : StateMachineBehaviour
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
+    { 
         //Una vez se ha completado el ataque, levantamos todas las condiciones especiales que se dieron para este ataque.
         animator.SetBool("isAttacking", false);
+        enemy.isVulnerable = true; 
         Physics.IgnoreCollision(target.GetComponent<CharacterController>(), enemy.GetComponent<CharacterController>(), false);
         //enemy.attackCollider.enabled = false;
     }

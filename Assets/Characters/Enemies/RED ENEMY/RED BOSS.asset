@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: INTERNAL DREAD
   animaType: {r: 0.9716981, g: 0, b: 0, a: 1}
-  health: 250
+  health: 500
   willpower: 100
   weaknesses:
   - {r: 0, g: 0, b: 0, a: 1}

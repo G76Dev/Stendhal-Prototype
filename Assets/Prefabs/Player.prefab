@@ -9721,9 +9721,9 @@ GameObject:
   - component: {fileID: 317478939001007134}
   - component: {fileID: 317478939001007135}
   - component: {fileID: 317478939001007120}
-  - component: {fileID: 1024097408}
   - component: {fileID: 1024097412}
   - component: {fileID: 1024097413}
+  - component: {fileID: 1699395176}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -9821,11 +9821,13 @@ MonoBehaviour:
   hitLayers:
     serializedVersion: 2
     m_Bits: 512
-  maxHealth: 300
+  maxHealth: 400
+  health: 0
   attackImpulse: 25
   canAttack: 0
   isVulnerable: 0
   isBlocking: 0
+  isDead: 0
   lockedEnemy: {fileID: 0}
   crosshair: {fileID: 0}
   lockedCrosshair: {fileID: 0}
@@ -9844,6 +9846,7 @@ MonoBehaviour:
   attackCollider: {fileID: 463129999}
   thrustFX: {fileID: 750589185}
   hatefulArrowCost: 70
+  defaultCamera: {fileID: 0}
 --- !u!114 &317478939001007135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9931,19 +9934,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!65 &1024097408
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 317478939001007130}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Size: {x: 4, y: 4, z: 5}
-  m_Center: {x: 0, y: 1.33, z: 2.47}
 --- !u!114 &1024097412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9977,8 +9967,8 @@ MonoBehaviour:
   color: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   textStyle: 1
   textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  defaultUseMessage: K) to interact
-  useKey: 107
+  defaultUseMessage: '[F] to interact'
+  useKey: 102
   useButton: Fire2
   enableTouch: 0
   touchArea:
@@ -10006,6 +9996,57 @@ MonoBehaviour:
   onDeselectedUsable:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1699395176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317478939001007130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 7ec5ff94090996e48b964cf2aa1b7693, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 317478939001007132}
+          m_MethodName: enableMovement
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 317478939001007134}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 317478939001007120}
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1 &317478939216303688
 GameObject:
   m_ObjectHideFlags: 0
@@ -15380,6 +15421,8 @@ GameObject:
   - component: {fileID: 317478939928685822}
   - component: {fileID: 317478939928685823}
   - component: {fileID: 317478939928685808}
+  - component: {fileID: 330361917}
+  - component: {fileID: 330361918}
   m_Layer: 0
   m_Name: Player Sprite
   m_TagString: Untagged
@@ -15493,6 +15536,42 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &330361917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317478939928685820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Event: event:/AUDIO/SFX/windLoopA
+  PlayEvent: 1
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &330361918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317478939928685820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &317478940208864295
 GameObject:
   m_ObjectHideFlags: 0

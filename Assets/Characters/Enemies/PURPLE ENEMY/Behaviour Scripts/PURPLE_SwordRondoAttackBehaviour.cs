@@ -27,6 +27,7 @@ public class PURPLE_SwordRondoAttackBehaviour : StateMachineBehaviour
         enemy.attackCollider.enabled = true;
         //Y finalmente reemplazamos el daño 'default' por el daño de este ataque en concreto.
         enemy.damage = attackDamage;
+        enemy.isVulnerable = false;
 
 
         //-ATTACK ACTION-
@@ -52,6 +53,7 @@ public class PURPLE_SwordRondoAttackBehaviour : StateMachineBehaviour
     {
         //Una vez se ha completado el ataque, levantamos todas las condiciones especiales que se dieron para este ataque.
         animator.SetBool("isAttacking", false);
+        enemy.isVulnerable = true;
         Physics.IgnoreCollision(target.GetComponent<CharacterController>(), enemy.GetComponent<CharacterController>(), false);
         enemy.attackCollider.enabled = false;
     }

@@ -750,6 +750,8 @@ public class CombatController : MonoBehaviour
             transform.LookAt(new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z));
 
             animator.SetTrigger("isBlocking");//Cada vez que el jugador bloquea un golpe con éxito, el tiempo de bloqueo se extiende.
+            weaponAnimator.gameObject.transform.LookAt(new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z));
+            weaponAnimator.SetTrigger("Block");
 
             //Aplica un tercio del knockback original del ataque.
             if (knockbackForce != 0)
